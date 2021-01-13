@@ -9,6 +9,8 @@
   <body>
     <a-scene id="js--scene">
       <a-assets>
+        <a-asset-item id="deur_prototype-obj" src="3dmodels/deur_prototype.obj"></a-asset-item>
+        <a-asset-item id="deur_prototype-mtl" src="3dmodels/deur_prototype.mtl"></a-asset-item>
       </a-assets>
       <a-camera id="js--camera">
         <a-entity
@@ -39,6 +41,11 @@
 
     <a-box color="#d3d3d3" width="0.2" depth="3" height="2.2" position="-2.5 1.1 -8"></a-box>
     <a-box color="#d3d3d3" width="0.2" depth="3" height="2.2" position="2.5 1.1 -8"></a-box>
+
+    <a-box color="#d3d3d3" width="0.2" depth="3" height="2.2" position="-2.5 1.1 -14"></a-box>
+    <a-box color="#d3d3d3" width="0.2" depth="3" height="2.2" position="2.5 1.1 -14"></a-box>
+
+    <a-obj-model id="js--deur" src="#deur_prototype-obj" mtl="#deur_prototype-mtl" position="-2.2 0 -6.05" scale="0.4 0.32 0.4" rotation="0 0 0"></a-obj-model>
 
     </a-scene>
   </body>
