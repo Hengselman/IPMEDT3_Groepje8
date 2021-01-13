@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>VR Escape Room - Puzzel 2</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <a-scene id="js--scene">
+      <a-assets>
+      </a-assets>
+      <a-camera id="js--camera">
+        <a-entity
+          id="js--entityCursor"
+          animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150;
+          from: 0.1 0.1 0.1; to: 1 1 1;"
+          animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1000;
+          from: 1 1 1; to: 0.1 0.1 0.1;"
+          animation="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500;
+          to: 1 1 1;"
+          cursor = "fuse: true; fuseTimeout: 1000"
+          material = "color: black; shader: flat"
+          geometry = "primitive: ring; radiusInner: 0.007; radiusOuter: 0.01"
+          position = "0 0 -0.5"
+          raycaster = "objects: .js--interact"
+        ></a-entity>
+      </a-camera>
+      <a-plane position="0 3 -5" color="yellow" material="side: double"><a-text value="Ni" align="center" color="black"></a-text></a-plane>
+      <a-plane position="1 3 -5" color="blue" material="side: double"><a-text value="me" align="center" color="black"></a-text></a-plane>
+      <a-plane position="2 3 -5" color="green" material="side: double"><a-text value="lala" align="center" color="black"></a-text></a-plane>
+      <a-text position=" 1 2 -5" value="directe vertaling: ik-voltooid-slapen" align="center" color="black"></a-text>
+      <a-text position=" 1 1.5 -5" value="vertaling: Ik heb geslapen" align="center" color="black"></a-text>
+
+      <a-plane position="4 3 -5" color="yellow" material="side: double"><a-text value="A" align="center" color="black"></a-text></a-plane>
+      <a-plane position="5 3 -5" color="blue" material="side: double"><a-text value="li" align="center" color="black"></a-text></a-plane>
+      <a-plane position="6 3 -5" color="purple" material="side: double"><a-text value="ku" align="center" color="black"></a-text></a-plane>
+      <a-plane position="7 3 -5" color="green" material="side: double"><a-text value="ona" align="center" color="black"></a-text></a-plane>
+      <a-text position=" 5.5 2 -5" value="directe vertaling: hij/zij-toen-jou-zien" align="center" color="black"></a-text>
+      <a-text position=" 5.5 1.5 -5" value="vertaling: Hij/zij zag jou" align="center" color="black"></a-text>
+
+      <a-plane position="9 3 -5" color="yellow" material="side: double"><a-text value="A" align="center" color="black"></a-text></a-plane>
+      <a-plane position="10 3 -5" color="blue" material="side: double"><a-text value="li" align="center" color="black"></a-text></a-plane>
+      <a-plane position="11 3 -5" color="purple" material="side: double"><a-text value="tu" align="center" color="black"></a-text></a-plane>
+      <a-plane position="12 3 -5" color="green" material="side: double"><a-text value="sikia" align="center" color="black"></a-text></a-plane>
+      <a-text position=" 10.5 2 -5" value="directe vertaling: hij/zij-toen-ons-horen" align="center" color="black"></a-text>
+      <a-text position=" 10.5 1.5 -5" value="vertaling: Hij/zij hoorde ons" align="center" color="black"></a-text>
+
+      <a-plane position="2 3 5" rotation="0 180 0" color="yellow" material="side: double"><a-text value="Tu" align="center" color="black"></a-text></a-plane>
+      <a-plane position="1 3 5" rotation="0 180 0" color="blue" material="side: double"><a-text value="na" align="center" color="black"></a-text></a-plane>
+      <a-plane position="0 3 5" rotation="0 180 0" color="green" material="side: double"><a-text value="soma" align="center" color="black"></a-text></a-plane>
+      <a-text position=" 1 2 5" rotation="0 180 0" value="directe vertaling: wij-nu-lezen" align="center" color="black"></a-text>
+      <a-text position=" 1 1.5 5" rotation="0 180 0" value="vertaling: Wij lezen" align="center" color="black"></a-text>
+
+      <a-plane position="6 3 5" rotation="0 180 0" color="yellow" material="side: double"><a-text value="Wa" align="center" color="black"></a-text></a-plane>
+      <a-plane position="5 3 5" rotation="0 180 0" color="blue" material="side: double"><a-text value="Ta" align="center" color="black"></a-text></a-plane>
+      <a-plane position="4 3 5" rotation="0 180 0" color="green" material="side: double"><a-text value="Penda" align="center" color="black"></a-text></a-plane>
+      <a-text position=" 5 2 5" rotation="0 180 0" value="directe vertaling: zij-toekomstig-houden-van" align="center" color="black"></a-text>
+      <a-text position=" 5 1.5 5" rotation="0 180 0" value="vertaling: Zij zullen van de ... houden" align="center" color="black"></a-text>
+
+      <a-plane position="-5 3 1" rotation="0 90 0" color="yellow" material="side: double"><a-text value="" align="center" color="black"></a-text></a-plane>
+      <a-plane position="-5 3 0" rotation="0 90 0" color="blue" material="side: double"><a-text value="" align="center" color="black"></a-text></a-plane>
+      <a-plane position="-5 3 -1" rotation="0 90 0" color="purple" material="side: double"><a-text value="" align="center" color="black"></a-text></a-plane>
+      <a-plane position="-5 3 -2" rotation="0 90 0" color="green" material="side: double"><a-text value="" align="center" color="black"></a-text></a-plane>
+      <a-text position=" -5 2 -0.5" rotation="0 90 0" value="Hoe zeg je in het Swahili:" align="center" color="black"></a-text>
+      <a-text position=" -5 1.5 -0.5" rotation="0 90 0" value="ik houd van jou?" align="center" color="black"></a-text>
+    </a-scene>
+    <script src="js/puzzel_2.js"></script>
+  </body>
+</html>
