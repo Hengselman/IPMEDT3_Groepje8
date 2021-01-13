@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Puzzel 1</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <a-scene id="js--puzzel_1-scene">
+      <a-assets>
+        <img id="js--Berber-img" src="Berber.png">
+        <img id="js--arabisch-img" src="arabisch.PNG">
+        <img id="js--ge'ez-img" src="ge'ez.png">
+        <img id="js--oud-egyptisch-img" src="oud-egyptisch.png">
+        <img id="js--vai-img" src="vai.png">
+      </a-assets>
+      <a-camera id="js--puzzel_1-camera">
+        <a-entity
+          id="js--entityCursor"
+          animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150;
+          from: 0.1 0.1 0.1; to: 1 1 1;"
+          animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1000;
+          from: 1 1 1; to: 0.1 0.1 0.1;"
+          animation="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500;
+          to: 1 1 1;"
+          cursor = "fuse: true; fuseTimeout: 1000"
+          material = "color: black; shader: flat"
+          geometry = "primitive: ring; radiusInner: 0.007; radiusOuter: 0.01"
+          position = "0 0 -0.5"
+          raycaster = "objects: .js--interact"
+        ></a-entity>
+      </a-camera>
+       <a-image src="#js--Berber-img"></a-image>
+    </a-scene>
+  </body>
+</html>
