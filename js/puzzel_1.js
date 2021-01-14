@@ -1,14 +1,13 @@
 window.onload = () =>{
-  var places = document.getElementsByClassName('js--place');
-  const camera = document.getElementById('js--puzzel_1-camera');
-  var keuze = document.getElementById('js--keuze');
-  let scene = document.getElementById('js--scene');
+  var keuzes = document.getElementsByClassName('js--keuze');
+  var schrift = document.getElementById('js--keuze-schrift');
+  var taal = document.getElementById('js--keuze-taal')
 
-
-  for(let i = 0; i < places.length; i++){
-    places[i].onmouseenter = (event) => {
-      brush = places[i].getAttribute("value");
-      console.log(brush);
+  for(let i = 0; i < keuzes.length; i++){
+    keuzes[i].onmouseenter = (event) => {
+      keuze = keuzes[i].getAttribute("value");
+      keuzes[i].setAttribute("color","yellow");
+      console.log(keuze);
 
     }
 
