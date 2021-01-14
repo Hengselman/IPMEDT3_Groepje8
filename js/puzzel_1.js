@@ -1,8 +1,11 @@
-window.onload = () =>{
-  var taal = document.getElementsByClassName('js--keuze-taal');
+var taal = document.getElementsByClassName('js--keuze-taal');
   var schrift = document.getElementsByClassName('js--keuze-schrift');
+  let taalKeuze = "";
+  let taalKleur = "";
+  let schriftKeuze = "";
+  let schriftKleur = "";
 
-function taalKleurYes(){
+function gemaakteKeuzes(){
   for(let i = 0; i < taal.length; i++){
     taal[i].onmouseenter = (event) => {
       taalKeuze = taal[i].getAttribute("value");
@@ -14,40 +17,28 @@ function taalKleurYes(){
       else if(taalKleur == "lightgrey"){
         taal[i].setAttribute("color","yellow");
         taalKleur = taal[i].getAttribute("color");
+        console.log(taalKeuze);
       }
-      console.log(taalKeuze);
-      console.log(taalKleur);
     }
   }
-}
-taalkleur = taalKleurYes();
-
-
-function schriftKleurYes(){
-  for(let i = 0; i < schrift.length; i++){
-    schrift[i].onmouseenter = (event) => {
-      schriftKeuze = schrift[i].getAttribute("value");
-      schriftKleur = schrift[i].getAttribute("color");
+  for(let j = 0; j < schrift.length; j++){
+    schrift[j].onmouseenter = (event) => {
+      schriftKeuze = schrift[j].getAttribute("value");
+      schriftKleur = schrift[j].getAttribute("color");
       if(schriftKleur == "blue"){
-        schrift[i].setAttribute("color","lightgrey");
-        schriftKleur = schrift[i].getAttribute("color");
+        schrift[j].setAttribute("color","lightgrey");
+        schriftKleur = schrift[j].getAttribute("color");
       }
       else if(schriftKleur == "lightgrey"){
-        schrift[i].setAttribute("color","blue");
-        schriftKleur = schrift[i].getAttribute("color");
+        schrift[j].setAttribute("color","blue");
+       schriftKleur = schrift[j].getAttribute("color");
       }
+      schriftKleur = schrift[j].getAttribute("color");
       console.log(schriftKeuze);
-      console.log(schriftKleur);
     }
   }
+  console.log("taalkeuze is: " + schriftKeuze);
+  console.log("schriftkeuze is: " + schriftKeuze);
 }
 
-schriftkleur = schriftKleurYes();
-
-function isJuist(taalkleur, schriftkleur){
-  console.log("taalkleur is: " + taalkleur);
-  console.log("schriftkleur is: " + schriftkleur);
-}
-
-isJuist(taalkleur, schriftkleur);
-}
+gemaakteKeuzes();
