@@ -33,11 +33,8 @@ window.onload = () =>{
       console.log(schriftKeuze);
       console.log(taalKeuze);
       if(schriftKeuze == taalKeuze){
-        console.log(j);
         schrift[j].setAttribute("color","green");
         taal[j].setAttribute("color","green");
-      }else{
-        console.log("niet juist");
       }
     }
   }
