@@ -1,26 +1,22 @@
-var taal = document.getElementsByClassName('js--keuze-taal');
+window.onload = () =>{
+  var taal = document.getElementsByClassName('js--keuze-taal');
   var schrift = document.getElementsByClassName('js--keuze-schrift');
-  let taalKeuze = "";
-  let taalKleur = "";
-  let schriftKeuze = "";
-  let schriftKleur = "";
 
-function gemaakteKeuzes(){
-  for(let i = 0; i < taal.length; i++){
-    taal[i].onmouseenter = (event) => {
-      taalKeuze = taal[i].getAttribute("value");
-      taalKleur = taal[i].getAttribute("color");
+  for(let j = 0; j < taal.length; j++){
+    taal[j].onmouseenter = (event) => {
+      taalKeuze = taal[j].getAttribute("value");
+      taalKleur = taal[j].getAttribute("color");
       if(taalKleur == "yellow"){
-        taal[i].setAttribute("color","lightgrey");
-        taalKleur = taal[i].getAttribute("color");
+        taal[j].setAttribute("color","lightgrey");
+        taalKleur = taal[j].getAttribute("color");
       }
       else if(taalKleur == "lightgrey"){
-        taal[i].setAttribute("color","yellow");
-        taalKleur = taal[i].getAttribute("color");
-        console.log(taalKeuze);
+        taal[j].setAttribute("color","yellow");
+        taalKleur = taal[j].getAttribute("color");
       }
     }
   }
+
   for(let j = 0; j < schrift.length; j++){
     schrift[j].onmouseenter = (event) => {
       schriftKeuze = schrift[j].getAttribute("value");
@@ -31,14 +27,19 @@ function gemaakteKeuzes(){
       }
       else if(schriftKleur == "lightgrey"){
         schrift[j].setAttribute("color","blue");
-       schriftKleur = schrift[j].getAttribute("color");
+        schriftKleur = schrift[j].getAttribute("color");
       }
       schriftKleur = schrift[j].getAttribute("color");
       console.log(schriftKeuze);
+      console.log(taalKeuze);
+      if(schriftKeuze == taalKeuze){
+        console.log(j);
+        schrift[j].setAttribute("color","green");
+        taal[j].setAttribute("color","green");
+      }else{
+        console.log("niet juist");
+      }
     }
   }
-  console.log("taalkeuze is: " + schriftKeuze);
-  console.log("schriftkeuze is: " + schriftKeuze);
-}
 
-gemaakteKeuzes();
+}
