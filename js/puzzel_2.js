@@ -120,7 +120,7 @@ window.onload = () =>{
 
   for(let i = 0; i < geel_value.length; i++){
     geel_value[i].onmouseenter = (event) => {
-      geel_value.value.setAttribute = antwoord_opgeslagen;
+      geel_value[i].setAttribute("value" , antwoord_opgeslagen);
       console.log(antwoord_opgeslagen);
     };
   }
