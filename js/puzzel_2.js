@@ -288,4 +288,39 @@ window.onload = () =>{
       }
     }
   }
+
+  var keuze_4 = document.getElementsByClassName('js--keuze-4');
+  var correct_4 = document.getElementsByClassName('js--correct-4');
+  var moetWeg = document.getElementsByClassName('js--correct-weg');
+
+  for(let j = 0; j < keuze_4.length; j++){
+    keuze_4[j].onmouseenter = (event) => {
+      gemaakteKeuze_4 = keuze_4[j].getAttribute("value");
+      keuzeKleur_4 = keuze_4[j].getAttribute("color");
+      if(keuzeKleur_4 == "red" || keuzeKleur_4 == "green"){
+        keuze_4[j].setAttribute("color","lightgrey");
+        keuzeKleur_4 = keuze_4[j].getAttribute("color");
+      }
+        if(gemaakteKeuze_4 == "onjuist"){
+          keuze_4[j].setAttribute("color","lightgrey");
+        }else{
+          keuze_4[j].setAttribute("color","green");
+        }
+        keuzeKleur_4 = keuze_4[j].getAttribute("color");
+        moetWeg
+        for(let j = 0; j < correct_4.length; j++){
+          if(keuzeKleur_4 == "green"){
+            correct_4[j].getAttribute("value");
+            correct_4[j].setAttribute("value", "Gefeliciteerd! je hebt de puzzel opgelost en hiervoor krijg je de volgende letter: T");
+          }
+        }
+        for(let j = 0; j < moetWeg.length; j++){
+          if(keuzeKleur_4 == "green"){
+            moetWeg[j].getAttribute("value");
+            moetWeg[j].setAttribute("value", "");
+          }
+        }
+
+      }
+  }
 };
