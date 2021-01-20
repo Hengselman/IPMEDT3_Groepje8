@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Puzzel 4</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene id="js--puzzel_1-scene">
+      <a-assets>
+        <img id="cijfers" src="img/puzzel_4.PNG"></img>
+      </a-assets>
+      <a-camera>
+        <a-entity
+          animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150;
+          from: 0.1 0.1 0.1; to: 1 1 1;"
+          animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1000;
+          from: 1 1 1; to: 0.1 0.1 0.1;"
+          animation="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500;
+          to: 1 1 1;"
+          cursor = "fuse: true; fuseTimeout: 1000"
+          material = "color: black; shader: flat"
+          geometry = "primitive: ring; radiusInner: 0.007; radiusOuter: 0.01"
+          position = "0 0 -0.5"
+          raycaster = "objects: .js--interact"
+        ></a-entity>
+      </a-camera>
+      <!-- Voor uitleg -->
+      <a-text class="js--correct" value="Het is ook vervelend: waar je het in het Nederlands hebt over ‘achttien’, is het in het Frans ‘dix-huit.’ In het Nederlands eindig je dus met het tiental, en zet je daarvoor wat je erbij optelt. In het Frans begin je met het tiental, en zet je eráchter wat je erbij optelt. Het Yoruba (gesproken in Nigeria en Benin) doet het weer helemaal anders... " position="-8 7 -10" color="black" height="2" width="8"></a-text>
+      <a-text value="‘Wel alle naamwoordklassen nog aan toe! Ik moet ook geen koffie drinken als ik met belangrijke gegevens bezig ben. Deze aantekeningen waren voor het college dat ik straks moet geven, waarin ik iets wilde uitleggen over getallen in het Yoruba. Nu ben ik mijn voorbeeld kwijt! Kunt u me helpen, vreemdeling? Hoe zeg je ‘zeventien’ in het Yoruba?’" position="2 7 -10" color="black" height="2" width="8"></a-text>
+
+      <a-text value="Gebruik deze afbeelding om tot je antwoord te komen" position="2 3 -10" color="black" height="2" width="8"></a-text>
+      <a-image src="#cijfers" position="6 0 -10" height="4" width="8"></a-image>
+
+      <a-text value="Kies hier het juiste antwoord: " position="-8.5 3 -10" color="black" height="2" width="8"></a-text>
+      <a-plane value="onjuist" class="js--keuze js--interact" color="lightgrey" position="-7 1 -10"  width="3">
+     <a-text value="ogung" align="center" color="black" width="8"></a-text>
+     </a-plane>
+      <a-plane value="juist" class="js--keuze js--interact" color="lightgrey" position="-7 -1 -10" width="3">
+      <a-text value="etadilogung" align="center" color="black" width="8"></a-text>
+      </a-plane>
+      <a-plane  value="onjuist" class="js--keuze js--interact" color="lightgrey" position="-3 -1 -10"  width="3">
+        <a-text value="eringdilogung" align="center" color="black" width="8"></a-text>
+      </a-plane>
+      <a-plane  value="onjuist" class="js--keuze js--interact" color="lightgrey" position="-3 1 -10"  width="3">
+        <a-text value="ering" align="center" color="black" width="8"></a-text>
+      </a-plane>
+
+    </a-scene>
+  </body>
+  <script src="js/puzzel_4.js"></script>
+</html>

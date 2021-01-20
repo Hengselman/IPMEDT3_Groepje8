@@ -18,6 +18,7 @@ window.onload = () =>{
   var paars_value = document.getElementsByClassName("paars_value");
   var groen_value = document.getElementsByClassName("groen_value");
   var geel_value = document.getElementsByClassName("geel_value");
+  var controle_text = document.getElementsByClassName("controle_text");
   var antwoord_opgeslagen = "";
 
   for(let i = 0; i < ni.length; i++){
@@ -171,15 +172,20 @@ window.onload = () =>{
     }
 
   function check_antwoord(){
-    var geel_antwoord = geel_value.getAttribute("value");
-    var blauw_antwoord = blauw_value.getAttribute("value");
-    var paars_antwoord = paars_value.getAttribute("value");
-    var groen_antwoord = groen_value.getAttribute("value");
+    var i = 0;
+    var geel_antwoord = geel_value[i].getAttribute("value");
+    var blauw_antwoord = blauw_value[i].getAttribute("value");
+    var paars_antwoord = paars_value[i].getAttribute("value");
+    var groen_antwoord = groen_value[i].getAttribute("value");
     if(geel_antwoord == "Ni" && blauw_antwoord == "na" && paars_antwoord == "ku" && groen_antwoord == "Penda"){
+      controle_text[i].setAttribute("value" , "Goede antwoord");
+      controle_text[i].setAttribute("color", "green");
       console.log("goede antwoord");
     }else{
+      controle_text[i].setAttribute("value" , "Foute antwoord");
+      controle_text[i].setAttribute("color", "red");
       console.log("fout antwoord");
     }
   }
-
+  // misschien nog geluidje als je het goede antwoord hebt.
 };
