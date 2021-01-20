@@ -11,6 +11,11 @@
       <a-assets>
         <a-asset-item id="deur_prototype-obj" src="3dmodels/deur_prototype.obj"></a-asset-item>
         <a-asset-item id="deur_prototype-mtl" src="3dmodels/deur_prototype.mtl"></a-asset-item>
+        <img id="js--Berber-img" src="img/Berber.png"></img>
+        <img id="js--arabisch-img" src="img/arabisch.PNG"></img>
+        <img id="js--ge'ez-img" src="img/ge'ez.png"></img>
+        <img id="js--oud-egyptisch-img" src="img/oud-egyptisch.png"></img>
+        <img id="js--vai-img" src="img/vai.png"></img>
       </a-assets>
       <a-camera id="js--camera">
         <a-entity
@@ -83,6 +88,31 @@
       <a-text value="1" position="7.02 3 0.2" rotation="0 90 0" align="center" color="black" scale="7 7 7"></a-text>
 
       <!-- De puzzel -->
+      <!-- Voor uitleg -->
+      <a-text class="js--a" value="Hoe veel schriften zijn er op de wereld? In Europa is er bijvoorbeeld het Latijnse alfabet, geschikt voor allerlei verschillende talen. Maar in Afrika gaat het net even anders: sommige Afrikaanse talen hebben hun eigen schrift, dat je voor geen enkele andere taal kunt gebruiken. Kijk maar naar de volgende vijf talen. Maar welk schrift hoort bij welke taal?" position="-4 7 -10" color="black" height="2" width="8"></a-text>
+      <!-- Alle schriften -->
+       <a-image class="js--keuze-schrift js--interact" value="Berber" color="lightgrey" src="#js--Berber-img" position="2 0.5 -2.5" height="0.3" width="1"></a-image>
+       <a-image class="js--keuze-schrift js--interact" value="Arabisch" color="lightgrey" src="#js--arabisch-img" position="2 -0.5 -2.5" height="0.3" width="1"></a-image>
+       <a-image class="js--keuze-schrift js--interact" value="Ge'ez" color="lightgrey" src="#js--ge'ez-img" position="2 0 -2.5" height="0.3" width="1"></a-image>
+       <a-image class="js--keuze-schrift js--interact" value="Egyptisch" color="lightgrey" src="#js--oud-egyptisch-img" position="2 -1.5 -2.5"  height="0.3" width="1"></a-image>
+       <a-image class="js--keuze-schrift js--interact" value="Vai" color="lightgrey" src="#js--vai-img" position="2 -1 -2.5" height="0.3" width="1"></a-image>
+
+       <!-- Alle talen  -->
+       <a-plane  value="Berber" class="js--keuze-taal js--interact" color="lightgrey" position="4 0 -2.5"  width="1" height="0.3">
+         <a-text value="Berber" align="center" color="black" width="3"></a-text>
+       </a-plane>
+       <a-plane value="Arabisch" class="js--keuze-taal js--interact" color="lightgrey" position="4 -0.5 -2.5"  width="1" height="0.3">
+      <a-text value="Arabisch" align="center" color="black" width="3"></a-text>
+      </a-plane>
+       <a-plane value="Ge'ez" class="js--keuze-taal js--interact" color="lightgrey" position="4 0.5 -2.5" width="1" height="0.3">
+       <a-text value="Ge'ez" align="center" color="black" width="3"></a-text>
+       </a-plane>
+       <a-plane value="Egyptisch" class="js--keuze-taal js--interact" color="lightgrey" position="4 -1 -2.5"  width="1" height="0.3">
+         <a-text value="Egyptisch"  align="center" color="black" width="3"></a-text>
+       </a-plane>
+       <a-plane value="Vai" class="js--keuze-taal js--interact" color="lightgrey" position="4 -1.5 -2.5"  width="1" height="0.3">
+       <a-text value="Vai" align="center" color="black" width="3"></a-text>
+       </a-plane>
 
     </a-box>
 
@@ -255,7 +285,7 @@
       <!-- De puzzel -->
 
     </a-box>
-
+    <script src="js/puzzel_1.js"></script>
     </a-scene>
   </body>
 </html>
