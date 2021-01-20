@@ -1,39 +1,38 @@
 window.onload = () =>{
-  var sphere = document.getElementsByClassName('js--sphere');
-  var keuze = document.getElementsByClassName('js--keuze');
-  var correct = document.getElementsByClassName('js--correct');
+  var sphere_puzzel_3 = document.getElementsByClassName('js--sphere-3');
+  var keuze_puzzel_3 = document.getElementsByClassName('js--keuze-3');
+  var correct_puzzel_3 = document.getElementsByClassName('js--correct-3');
 
-  for(let j = 0; j < sphere.length; j++){
-    sphere[j].onmouseenter = (event) => {
-      sphereKeuze = sphere[j].getAttribute("value");
-      sphereKleur = sphere[j].getAttribute("color");
-      if(sphereKleur == "lightblue"){
-        sphere[j].setAttribute("color","lightpink");
-        sphereKleur = sphere[j].getAttribute("color");
+  for(let j = 0; j < sphere_puzzel_3.length; j++){
+    sphere_puzzel_3[j].onmouseenter = (event) => {
+      sphereKeuze_3 = sphere_puzzel_3[j].getAttribute("value");
+      sphereKleur_3 = sphere_puzzel_3[j].getAttribute("color");
+      if(sphereKleur_3 == "lightblue"){
+        sphere_puzzel_3[j].setAttribute("color","lightpink");
+        sphereKleur_3 = sphere_puzzel_3[j].getAttribute("color");
       }
-      else if(sphereKleur == "lightpink"){
-        sphere[j].setAttribute("color","lightblue");
-        sphereKleur = sphere[j].getAttribute("color");
+      else if(sphereKleur_3 == "lightpink"){
+        sphere_puzzel_3[j].setAttribute("color","lightblue");
+        sphereKleur_3 = sphere_puzzel_3[j].getAttribute("color");
       }
     }
   }
 
-  for(let j = 0; j < keuze.length; j++){
-    keuze[j].onmouseenter = (event) => {
-      gemaakteKeuze = keuze[j].getAttribute("value");
-      keuzeKleur = keuze[j].getAttribute("color");
-      if(keuzeKleur == "blue"){
-        keuze[j].setAttribute("color","lightgrey");
-        keuzeKleur = keuze[j].getAttribute("color");
+  for(let j = 0; j < keuze_puzzel_3.length; j++){
+    keuze_puzzel_3[j].onmouseenter = (event) => {
+      gemaakteKeuze_3 = keuze_puzzel_3[j].getAttribute("value");
+      keuzeKleur_3 = keuze_puzzel_3[j].getAttribute("color");
+      if(keuzeKleur_3 == "blue"){
+        keuze_puzzel_3[j].setAttribute("color","lightgrey");
+        keuzeKleur = keuze_puzzel_3[j].getAttribute("color");
       }
-      else if(keuzeKleur == "lightgrey"){
-        keuze[j].setAttribute("color","blue");
-        keuzeKleur = keuze[j].getAttribute("color");
+      else if(keuzeKleur_3 == "lightgrey"){
+        keuze_puzzel_3[j].setAttribute("color","blue");
+        keuzeKleur_3 = keuze_puzzel_3[j].getAttribute("color");
       }
-      schriftKleur = keuze[j].getAttribute("color");
-      if(gemaakteKeuze == sphereKeuze){
-        keuze[j].setAttribute("color","lightgreen");
-        sphere[j].setAttribute("color","lightgreen");
+      if(gemaakteKeuze_3 == sphereKeuze_3){
+        keuze_puzzel_3[j].setAttribute("color","lightgreen");
+        sphere_puzzel_3[j].setAttribute("color","lightgreen");
       }
 
       gemaakteKeuze1 = keuze[0].getAttribute("color");
@@ -42,8 +41,8 @@ window.onload = () =>{
 
       for(let j = 0; j < correct.length; j++){
         if(gemaakteKeuze1 == "lightgreen" && gemaakteKeuze2 == "lightgreen" && gemaakteKeuze3 == "lightgreen"){
-          correct[j].getAttribute("value");
-          correct[j].setAttribute("value", "Gefeliciteerd! je hebt de puzzel opgelost en hiervoor krijg je de volgende letter: C");
+          correct_puzzel_3[j].getAttribute("value");
+          correct_puzzel_3[j].setAttribute("value", "Gefeliciteerd! je hebt de puzzel opgelost en hiervoor krijg je de volgende letter: C");
         }
       }
     }
