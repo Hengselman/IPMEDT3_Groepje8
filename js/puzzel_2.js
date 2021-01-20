@@ -13,10 +13,9 @@ window.onload = () =>{
   var wa = document.getElementsByClassName("wa");
   var ta = document.getElementsByClassName("ta");
   var penda = document.getElementsByClassName("penda");
-  var antwoord_geel = document.getElementsByClassName("antwoord_geel");
-  var antwoord_blauw = document.getElementsByClassName("antwoord_blauw");
-  var antwoord_paars = document.getElementsByClassName("antwoord_paars");
-  var antwoord_groen = document.getElementsByClassName("antwoord_groen");
+  var blauw_value = document.getElementsByClassName("blauw_value");
+  var paars_value = document.getElementsByClassName("paars_value");
+  var groen_value = document.getElementsByClassName("groen_value");
   var geel_value = document.getElementsByClassName("geel_value");
   var antwoord_opgeslagen = "";
 
