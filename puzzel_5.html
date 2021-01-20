@@ -36,33 +36,45 @@
 
       <a-text position="3 2.25 -5" value="4)    Patiens: de patiens ondergaat de actie van het werkwoord. Bijvoorbeeld in ‘de man leest de brief’ wordt er iets gedaan met ‘de brief.’ Die wordt namelijk gelezen (door de man). De patiens is echter niet exact hetzelfde als het lijdend voorwerp." align="center" color="black"></a-text>
 
-      <a-text position="9 2.5 -5" value="4)	Patiens: de patiens ondergaat de actie van het werkwoord. Bijvoorbeeld in ‘de man leest de brief’ wordt er iets gedaan met ‘de brief.’ Die wordt namelijk gelezen (door de man). De patiens is echter niet exact hetzelfde als het lijdend voorwerp. In de zin ‘het boek wordt gelezen door de jongen’ ondergaat ‘het boek’ de actie van het lezen (en is het dus de patiens), maar is het het onderwerp (‘Wie of wat wordt gelezen? Het boek)!" align="center" color="black"></a-text>
-
       <a-text position="0 5 5" rotation="0 180 0" value="In het Kinyarwanda (gesproken in Rwanda) werkt het ook zo. In de zinnen die je hier ziet, staat steeds dezelfde informatiebron vóór het werkwoord, maar welke? De agens, de patiens, de focus of het topic? " align="center" color="black"></a-text>
 
       <a-text position="0 1 5" rotation="0 180 0" value="1a.	Umúnyéeshuûri		y-a-gii-ye		kw’	iishuûri
-	     student			hij-toen-gaan-voltooid	naar	school
-	      ‘De student ging naar schóól (en niet naar huis).’
+	    student			hij-toen-gaan-voltooid	naar	school
+	    ‘De student ging naar schóól (en niet naar huis).’
 
-        1b.	Ishuûri		ry-a-gii-yé-ho		umúnyéeshuûri
-	      school		hij-toen-gaan-voltooid-locatie	student
-	      ‘Het is de student die naar school ging.’
-	      Letterlijk: ‘De school ging de student.’
+      1b.	Ishuûri		ry-a-gii-yé-ho		umúnyéeshuûri
+	    school		hij-toen-gaan-voltooid-locatie	student
+	    ‘Het is de student die naar school ging.’
+	    Letterlijk: ‘De school ging de student.’
 
-        2	Ikárámu	i-ra-andik-iish-a			úmwáalímu
-	       pen		hij-nu-schrijven-met-onvoltooid	leraar
-         ‘De pen wordt gebruikt om mee te schrijven door de léraar’
-         Letterlijk: ‘De pen schrijft de leraar.’
+      2	Ikárámu	i-ra-andik-iish-a			úmwáalímu
+	    pen		hij-nu-schrijven-met-onvoltooid	leraar
+      ‘De pen wordt gebruikt om mee te schrijven door de léraar’
+      Letterlijk: ‘De pen schrijft de leraar.’
 
-         3a.	Abáana	nti-ba-nywá		inzogá.
-	        kinderen	niet-zij-drinken	alcohol
-	         ‘Kinderen drinken geen alcohol (maar wel water).’
+      3a.	Abáana	nti-ba-nywá		inzogá.
+	    kinderen	niet-zij-drinken	alcohol
+	    ‘Kinderen drinken geen alcohol (maar wel water).’
 
-           3b.	Inzogá	nti-zi-nywá		abáana.
-	          alcohol	niet-hij-drinken	kinderen
-	           ‘Het zijn de kinderen die geen alcohol drinken.’
-	            Letterlijk: ‘Alcohol drinkt geen kinderen.’
-              " align="center" color="black"></a-text>
+      3b.	Inzogá	nti-zi-nywá		abáana.
+	    alcohol	niet-hij-drinken	kinderen
+	    ‘Het zijn de kinderen die geen alcohol drinken.’
+	    Letterlijk: ‘Alcohol drinkt geen kinderen.’
+      "align="center" color="black"></a-text>
+
+      <a-text value="Kies hier het juiste antwoord: " position="-4 3 5" rotation="0 180 0" color="black" height="2" width="8"></a-text>
+      <a-plane value="onjuist" class="js--keuze js--interact" rotation="0 180 0" color="lightgrey" position="-8 1 5"  width="3">
+      <a-text value="agens" align="center" color="black" width="8"></a-text>
+      </a-plane>
+      <a-plane value="juist" rotation="0 180 0" class="js--keuze js--interact" color="lightgrey" position="-8 -1 5" width="3">
+      <a-text value="Topic" align="center" color="black" width="8"></a-text>
+      </a-plane>
+      <a-plane  value="onjuist" rotation="0 180 0" class="js--keuze js--interact" color="lightgrey" position="-4 -1 5"  width="3">
+      <a-text value="patiens" align="center" color="black" width="8"></a-text>
+      </a-plane>
+      <a-plane  value="onjuist"  rotation="0 180 0" class="js--keuze js--interact" color="lightgrey" position="-4 1 5"  width="3">
+      <a-text value="focus" align="center" color="black" width="8"></a-text>
+      </a-plane>
     </a-scene>
     <script src="js/puzzel_5.js"></script>
   </body>
