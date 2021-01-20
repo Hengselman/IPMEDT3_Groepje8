@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>VR Escape Room - Puzzel 5</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <link rel="shortcut icon" href="#" />
+  </head>
+  <body>
+    <a-scene id="js--scene">
+      <a-assets>
+      </a-assets>
+      <a-camera id="js--camera">
+        <a-entity
+          id="js--cursor-puzzel_2"
+          animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150;
+          from: 0.1 0.1 0.1; to: 1 1 1;"
+          animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1000;
+          from: 1 1 1; to: 0.1 0.1 0.1;"
+          animation="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500;
+          to: 1 1 1;"
+          cursor = "fuse: true; fuseTimeout: 1000"
+          material = "color: black; shader: flat"
+          geometry = "primitive: ring; radiusInner: 0.007; radiusOuter: 0.01"
+          position = "0 0 -0.5"
+          raycaster = "objects: .js--interact"
+        ></a-entity>
+      </a-camera>
+      <a-text position=" 1 5 -5" value="In het Nederlands kun je niet zeggen “de kanarie de kat ving.” Dat is raar. We moeten nou eenmaal de woordvolgorde “de kanarie ving de kat” aanhouden. Dat komt doordat in het Nederlands het onderwerp ‘de kanarie’ vóór het werkwoord ‘ving’ hoort, en ‘de kat’ áchter het werkwoord komt. In veel Afrikaanse talen wordt de woordvolgorde echter door iets heel anders bepaald! De positie van een woord hangt af van de informatie die het woord je geeft. Maak je klaar voor wat echte taalwetenschapperstermen: " align="center" color="black"></a-text>
+
+      <a-text position=" -6 2.5 -5" value="1)	Topic: het topic is vaak de informatie die eerder in het verhaal al is genoemd. Als het topic opnieuw langskomt, weten te toehoorders al dat dit een onderdeel is van het verhaal en gaat de aandacht eerder uit naar een element dat nieuw wordt genoemd. Bijvoorbeeld: ‘maar wat betreft die hond dus, die kreeg een bót van z’n baasje!’ Hierin is de hond dus het topic." align="center" color="black"></a-text>
+
+      <a-text position=" -1 2.5 -5" value="2)	Focus: de focus is het element dat nieuw wordt genoemd. Omdat de toehoorders nog niet weten dat dit element onderdeel uitmaakt van het verhaal, komt er extra aandacht op. In het voorbeeld ‘maar wat betreft die hond dus, die kreeg een bót van z’n baasje!’ is het bot de focus. Het kan ook dat de focus extra belangrijk wordt gevonden: ‘het was een bót dat de hond kreeg!’ Er kan ook nadruk op komen om een contrast aan te geven: ‘nee, de jongen ging niet línksaf (maar réchtsaf)!’" align="center" color="black"></a-text>
+
+      <a-text position="4 2.5 -5" value="3)	Agens: de agens voert vrijwillig een actie uit: hij loopt, hij rent, hij leest... Belangrijk om te onthouden is dat de agens niet hetzelfde is als het ‘onderwerp’ in het Nederlands. In een Nederlandse lijdende zin, zoals ‘het boek wordt gelezen door de jongen’ is ‘het boek’ het onderwerp (‘Wie of wat wordt gelezen? Het boek’), maar is het boek niet vrijwillig een actie aan het uitvoeren." align="center" color="black"></a-text>
+
+      <a-text position="9 2.5 -5" value="4)	Patiens: de patiens ondergaat de actie van het werkwoord. Bijvoorbeeld in ‘de man leest de brief’ wordt er iets gedaan met ‘de brief.’ Die wordt namelijk gelezen (door de man). De patiens is echter niet exact hetzelfde als het lijdend voorwerp. In de zin ‘het boek wordt gelezen door de jongen’ ondergaat ‘het boek’ de actie van het lezen (en is het dus de patiens), maar is het het onderwerp (‘Wie of wat wordt gelezen? Het boek)!" align="center" color="black"></a-text>
+    </a-scene>
+    <script src="js/puzzel_5.js"></script>
+  </body>
+</html>
