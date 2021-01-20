@@ -31,8 +31,6 @@ window.onload = () =>{
         keuzeKleur = keuze[j].getAttribute("color");
       }
       schriftKleur = keuze[j].getAttribute("color");
-      console.log(gemaakteKeuze);
-      console.log(sphereKeuze);
       if(gemaakteKeuze == sphereKeuze){
         keuze[j].setAttribute("color","lightgreen");
         sphere[j].setAttribute("color","lightgreen");

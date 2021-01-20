@@ -7,11 +7,11 @@
   </head>
   <body>
     <a-scene id="js--puzzel_1-scene">
-      <!-- <a-assets>
-        <sound id="mali" src="mali.mp3">
-        <sound id="buku" src="buku.mp3">
-        <sound id="kiyele" src="kiyele.mp3">
-      </a-assets> -->
+      <a-assets>
+        <sound id="mali" src="music/mali.mp4">
+        <sound id="buku" src="music/buku.mp4">
+        <sound id="kiyele" src="music/kiyele.mp4">
+      </a-assets>
       <a-camera>
         <a-entity
           animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150;
@@ -33,9 +33,9 @@
 
       <a-text value="Het is de bedoeling dat je eerst op een bol klikt om het geluid af te spelen en daarna klik je op het vak wat jij denkt dat erbij hoort." position="2 7 -10" color="black" height="2" width="8"></a-text>
 
-      <a-sphere class="js--sphere js--interact" value="hoog-laag" color="lightpink" radius="0.2" position="2.5 0 -3"></a-sphere>
-      <a-sphere class="js--sphere js--interact" value="hoog-hoog" color="lightpink" radius="0.2" position="0 0 -3"></a-sphere>
-      <a-sphere class="js--sphere js--interact" value="laag-hoog-laag" color="lightpink" radius="0.2" position="-2.5 0 -3"></a-sphere>
+      <a-sphere class="js--sphere js--interact" value="hoog-laag" sound="src: #mali; volume: 2; loop: false; on: mouseenter;" color="lightpink" radius="0.2" position="2.5 0 -3"></a-sphere>
+      <a-sphere class="js--sphere js--interact" value="hoog-hoog" sound="src: #buku; volume: 2; loop: false; on: mouseenter;" color="lightpink" radius="0.2" position="0 0 -3"></a-sphere>
+      <a-sphere class="js--sphere js--interact" value="laag-hoog-laag" sound="src: #kiyele; volume: 2; loop: false; on: mouseenter;" color="lightpink" radius="0.2" position="-2.5 0 -3"></a-sphere>
 
 
       <a-plane value="hoog-laag" class="js--keuze js--interact" color="lightgrey" position="0 1 -5"  width="2">
