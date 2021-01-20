@@ -11,7 +11,7 @@ window.onload = () =>{
         keuzeKleur = keuze[j].getAttribute("color");
       }
         if(gemaakteKeuze == "onjuist"){
-          keuze[j].setAttribute("color","red");
+          keuze[j].setAttribute("color","lightgrey");
         }else{
           keuze[j].setAttribute("color","green");
         }
@@ -26,6 +26,5 @@ window.onload = () =>{
         }
 
       }
-
-    }
   }
+}
