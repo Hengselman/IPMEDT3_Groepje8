@@ -187,5 +187,5 @@ window.onload = () =>{
       console.log("fout antwoord");
     }
   }
-
+  // misschien nog geluidje als je het goede antwoord hebt.
 };
