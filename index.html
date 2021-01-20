@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>VR Escape Room - Afrikaanse talen</title>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-    <!-- <script src="main.js"></script> -->
+    <script src="js/main.js"></script>
   </head>
   <body>
     <a-scene id="js--scene">
@@ -16,6 +16,9 @@
         <img id="js--ge'ez-img" src="img/ge'ez.png"></img>
         <img id="js--oud-egyptisch-img" src="img/oud-egyptisch.png"></img>
         <img id="js--vai-img" src="img/vai.png"></img>
+        <sound id="mali" src="music/mali.mp4">
+        <sound id="buku" src="music/buku.mp4">
+        <sound id="kiyele" src="music/kiyele.mp4">
       </a-assets>
       <a-camera id="js--camera">
         <a-entity
@@ -53,7 +56,23 @@
     <a-box color="#d3d3d3" width="0.2" depth="3" height="2.2" position="2.5 1.1 -20"></a-box>
 
     <!-- Info paneel -->
-    <a-plane color="blue" width="3" height="2" position="0 1.6 -1.89" rotation="0 0 0">
+    <a-plane color="blue" width="3" height="2" position="0 1.6 1.89" rotation="0 180 0">
+      <a-text value="Kijk naar een\nrode knop\nnaast de puzzel\ndie nog opgelost\nmoet worden.\nDit brengt je\nnaar de gekozen\npuzzel." position="-1.4 0 0" color="black" scale="0.8 0.8 0.8"></a-text>
+
+      <a-cylinder id="js--teleportPuzzel1" class="js--interact" color="red" position="0.4 0.6 0" rotation="90 0 0" height="0.05" radius="0.1"></a-cylinder>
+      <a-text value="Puzzel 1" position="0.5 0.6 0" color="black" scale="0.8 0.8 0.8"></a-text>
+
+      <a-cylinder id="js--teleportPuzzel2" class="js--interact" color="red" position="0.4 0.3 0" rotation="90 0 0" height="0.05" radius="0.1"></a-cylinder>
+      <a-text value="Puzzel 2" position="0.5 0.3 0" color="black" scale="0.8 0.8 0.8"></a-text>
+
+      <a-cylinder id="js--teleportPuzzel3" class="js--interact" color="red" position="0.4 0 0" rotation="90 0 0" height="0.05" radius="0.1"></a-cylinder>
+      <a-text value="Puzzel 3" position="0.5 0 0" color="black" scale="0.8 0.8 0.8"></a-text>
+
+      <a-cylinder id="js--teleportPuzzel4" class="js--interact" color="red" position="0.4 -0.3 0" rotation="90 0 0" height="0.05" radius="0.1"></a-cylinder>
+      <a-text value="Puzzel 4" position="0.5 -0.3 0" color="black" scale="0.8 0.8 0.8"></a-text>
+
+      <a-cylinder id="js--teleportPuzzel5" class="js--interact" color="red" position="0.4 -0.6 0" rotation="90 0 0" height="0.05" radius="0.1"></a-cylinder>
+      <a-text value="Puzzel 5" position="0.5 -0.6 0" color="black" scale="0.8 0.8 0.8"></a-text>
 
 
     </a-plane>
@@ -223,6 +242,28 @@
       <!-- De puzzel -->
 
     </a-box>
+    <a-box position="-6 1.6 -11" color="black" height="0.001" width="0.001" depth="0.001">
+      <!-- Voor uitleg -->
+      <a-text class="js--correct-3" value="In een zogenoemde toontaal heeft elke lettergreep een vaste toonhoogte, zoals hoog, laag,
+      dalend of stijgend, en is die toonhoogte wat we noemen contrastief. Dat wil zeggen dat de betekenis van een woord enkel en alleen afhangt van de toonhoogte waarop het wordt uitgesproken. Ongeveer 60-70% van de talen op de wereld maakt gebruik van zulke contrastieve toon, en in Afrika weten ze er zeker wel raad mee! In het Teke-Kukuya bijvoorbeeld (gesproken in Congo) betekent buku met twee lage tonen ‘onderdeel’, maar betekent buku met twee hoge tonen ‘boek’! Welke tonen hoor je in de volgende Teke-Kukuya woorden?" position="-3 0 2" rotation="0 90 0" color="black" height="2" width="4"></a-text>
+
+      <a-text value="Het is de bedoeling dat je eerst op een bol klikt om het geluid af te spelen en daarna klik je op de toon die erbij hoort." position="-1.5 0.75 -2.8" color="black" height="2" width="3"></a-text>
+
+      <a-sphere class="js--sphere-3 js--interact" value="hoog-laag" sound="src: #mali; volume: 2; loop: false; on: mouseenter;" color="lightpink" radius="0.2" position="2 -1.1 -2.25"></a-sphere>
+      <a-sphere class="js--sphere-3 js--interact" value="hoog-hoog" sound="src: #buku; volume: 2; loop: false; on: mouseenter;" color="lightpink" radius="0.2" position="0 -1.1 -2.25"></a-sphere>
+      <a-sphere class="js--sphere-3 js--interact" value="laag-hoog-laag" sound="src: #kiyele; volume: 2; loop: false; on: mouseenter;" color="lightpink" radius="0.2" position="-2 -1.1 -2.25"></a-sphere>
+
+
+      <a-plane value="hoog-laag" class="js--keuze-3 js--interact" color="lightgrey" position="0 0 -2.8"  width="1.1" height="0.3">
+     <a-text value="hoog-laag" align="center" color="black" width="4"></a-text>
+     </a-plane>
+      <a-plane value="hoog-hoog" class="js--keuze-3 js--interact" color="lightgrey" position="-2 0 -2.8" width="1.1" height="0.3">
+      <a-text value="hoog-hoog" align="center" color="black" width="4"></a-text>
+      </a-plane>
+      <a-plane  value="laag-hoog-laag" class="js--keuze-3 js--interact" color="lightgrey" position="2 0 -2.8"  width="1.1" height="0.3">
+        <a-text value="laag-hoog-laag" align="center" color="black" width="4"></a-text>
+      </a-plane>
+    </a-box>
 
     <!-- ===================Puzzelkamer 4=================== -->
     <a-box color="#d3d3d3" width="0.2" depth="6" height="3.7" position="9.5 1.85 -11" rotation="0 180 0">
@@ -380,5 +421,6 @@
 
     </a-scene>
   </body>
-  <script src="js/puzzel_2.js"></script>
+
+  <!-- <script src="js/puzzel_2.js"></script> -->
 </html>
