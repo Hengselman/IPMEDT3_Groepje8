@@ -6,7 +6,8 @@ window.onload = () =>{
   var li = document.getElementsByClassName("li");
   var ku = document.getElementsByClassName("ku");
   var ona = document.getElementsByClassName("ona");
-  var tu = document.getElementsByClassName("tu");
+  var tu_p = document.getElementsByClassName("tu_p");
+  var tu_g = document.getElementsByClassName("tu_g");
   var sikia = document.getElementsByClassName("sikia");
   var na = document.getElementsByClassName("na");
   var soma = document.getElementsByClassName("soma");
@@ -23,6 +24,9 @@ window.onload = () =>{
     ni[i].onmouseenter = (event) => {
       antwoord_opgeslagen = ni[i].getAttribute("value");
       console.log(antwoord_opgeslagen);
+      geel_value[i].setAttribute("value" , antwoord_opgeslagen);
+      console.log(antwoord_opgeslagen);
+      check_antwoord();
       };
     }
 
@@ -30,6 +34,9 @@ window.onload = () =>{
     me[i].onmouseenter = (event) => {
       antwoord_opgeslagen = me[i].getAttribute("value");
       console.log(antwoord_opgeslagen);
+      blauw_value[i].setAttribute("value" , antwoord_opgeslagen);
+      console.log(antwoord_opgeslagen);
+      check_antwoord();
       };
     }
 
@@ -37,6 +44,9 @@ window.onload = () =>{
     lala[i].onmouseenter = (event) => {
       antwoord_opgeslagen = lala[i].getAttribute("value");
       console.log(antwoord_opgeslagen);
+      groen_value[i].setAttribute("value" , antwoord_opgeslagen);
+      console.log(antwoord_opgeslagen);
+      check_antwoord();
       };
     }
 
@@ -44,6 +54,9 @@ window.onload = () =>{
     a[i].onmouseenter = (event) => {
       antwoord_opgeslagen = a[i].getAttribute("value");
       console.log(antwoord_opgeslagen);
+      geel_value[i].setAttribute("value" , antwoord_opgeslagen);
+      console.log(antwoord_opgeslagen);
+      check_antwoord();
       };
     }
 
@@ -51,6 +64,9 @@ window.onload = () =>{
     li[i].onmouseenter = (event) => {
       antwoord_opgeslagen = li[i].getAttribute("value");
       console.log(antwoord_opgeslagen);
+      blauw_value[i].setAttribute("value" , antwoord_opgeslagen);
+      console.log(antwoord_opgeslagen);
+      check_antwoord();
       };
     }
 
@@ -58,6 +74,9 @@ window.onload = () =>{
     ku[i].onmouseenter = (event) => {
       antwoord_opgeslagen = ku[i].getAttribute("value");
       console.log(antwoord_opgeslagen);
+      paars_value[i].setAttribute("value" , antwoord_opgeslagen);
+      console.log(antwoord_opgeslagen);
+      check_antwoord();
       };
     }
 
@@ -65,20 +84,39 @@ window.onload = () =>{
     ona[i].onmouseenter = (event) => {
       antwoord_opgeslagen = ona[i].getAttribute("value");
       console.log(antwoord_opgeslagen);
+      groen_value[i].setAttribute("value" , antwoord_opgeslagen);
+      console.log(antwoord_opgeslagen);
+      check_antwoord();
       };
     }
 
-  for(let i = 0; i < tu.length; i++){
-    tu[i].onmouseenter = (event) => {
-      antwoord_opgeslagen = tu[i].getAttribute("value");
+  for(let i = 0; i < tu_g.length; i++){
+    tu_g[i].onmouseenter = (event) => {
+      antwoord_opgeslagen = tu_g[i].getAttribute("value");
       console.log(antwoord_opgeslagen);
+      geel_value[i].setAttribute("value" , antwoord_opgeslagen);
+      console.log(antwoord_opgeslagen);
+      check_antwoord();
       };
     }
+
+    for(let i = 0; i < tu_p.length; i++){
+      tu_p[i].onmouseenter = (event) => {
+        antwoord_opgeslagen = tu_p[i].getAttribute("value");
+        console.log(antwoord_opgeslagen);
+        paars_value[i].setAttribute("value" , antwoord_opgeslagen);
+        console.log(antwoord_opgeslagen);
+        check_antwoord();
+        };
+      }
 
   for(let i = 0; i < sikia.length; i++){
     sikia[i].onmouseenter = (event) => {
       antwoord_opgeslagen = sikia[i].getAttribute("value");
       console.log(antwoord_opgeslagen);
+      groen_value[i].setAttribute("value" , antwoord_opgeslagen);
+      console.log(antwoord_opgeslagen);
+      check_antwoord();
       };
     }
 
@@ -86,6 +124,9 @@ window.onload = () =>{
     na[i].onmouseenter = (event) => {
       antwoord_opgeslagen = na[i].getAttribute("value");
       console.log(antwoord_opgeslagen);
+      blauw_value[i].setAttribute("value" , antwoord_opgeslagen);
+      console.log(antwoord_opgeslagen);
+      check_antwoord();
       };
     }
 
@@ -93,6 +134,9 @@ window.onload = () =>{
     soma[i].onmouseenter = (event) => {
       antwoord_opgeslagen = soma[i].getAttribute("value");
       console.log(antwoord_opgeslagen);
+      groen_value[i].setAttribute("value" , antwoord_opgeslagen);
+      console.log(antwoord_opgeslagen);
+      check_antwoord();
       };
     }
 
@@ -100,6 +144,9 @@ window.onload = () =>{
     wa[i].onmouseenter = (event) => {
       antwoord_opgeslagen = wa[i].getAttribute("value");
       console.log(antwoord_opgeslagen);
+      geel_value[i].setAttribute("value" , antwoord_opgeslagen);
+      console.log(antwoord_opgeslagen);
+      check_antwoord();
       };
     }
 
@@ -107,6 +154,9 @@ window.onload = () =>{
     ta[i].onmouseenter = (event) => {
       antwoord_opgeslagen = ta[i].getAttribute("value");
       console.log(antwoord_opgeslagen);
+      blauw_value[i].setAttribute("value" , antwoord_opgeslagen);
+      console.log(antwoord_opgeslagen);
+      check_antwoord();
       };
     }
 
@@ -114,14 +164,22 @@ window.onload = () =>{
     penda[i].onmouseenter = (event) => {
       antwoord_opgeslagen = penda[i].getAttribute("value");
       console.log(antwoord_opgeslagen);
+      groen_value[i].setAttribute("value" , antwoord_opgeslagen);
+      console.log(antwoord_opgeslagen);
+      check_antwoord();
       };
     }
 
-  for(let i = 0; i < geel_value.length; i++){
-    geel_value[i].onmouseenter = (event) => {
-      geel_value[i].setAttribute("value" , antwoord_opgeslagen);
-      console.log(antwoord_opgeslagen);
-    };
+  function check_antwoord(){
+    var geel_antwoord = geel_value.getAttribute("value");
+    var blauw_antwoord = blauw_value.getAttribute("value");
+    var paars_antwoord = paars_value.getAttribute("value");
+    var groen_antwoord = groen_value.getAttribute("value");
+    if(geel_antwoord == "Ni" && blauw_antwoord == "na" && paars_antwoord == "ku" && groen_antwoord == "Penda"){
+      console.log("goede antwoord");
+    }else{
+      console.log("fout antwoord");
+    }
   }
 
 };
