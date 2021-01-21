@@ -21,6 +21,10 @@
         <sound id="buku" src="music/buku.mp4">
         <sound id="kiyele" src="music/kiyele.mp4">
         <img id="cijfers" src="img/puzzel_4.PNG"></img>
+        <img id="20" src="img/20.PNG"></img>
+        <img id="ering" src="img/ering.PNG"></img>
+        <img id="juist" src="img/juist.PNG"></img>
+        <img id="ogung" src="img/ogung.png"></img>
       </a-assets>
       <a-camera id="js--camera">
         <a-entity
@@ -311,18 +315,11 @@
       <a-image src="#cijfers" position="-1.5 -0.5 -2.8" height="1.5" width="3"></a-image>
 
       <a-text value="Kies hier het juiste antwoord: " position="0.5 0.5 -2.8" color="black" height="2" width="4"></a-text>
-      <a-plane value="onjuist" class="js--keuze-4 js--interact" color="lightgrey" position="1 0 -2.8" width="1.1" height="0.3">
-     <a-text value="ogung" align="center" color="black" width="4"></a-text>
-     </a-plane>
-      <a-plane value="juist" class="js--keuze-4 js--interact" color="lightgrey" position="1 -1 -2.8" width="1.1" height="0.3">
-      <a-text value="etadilogung" align="center" color="black" width="4"></a-text>
-      </a-plane>
-      <a-plane  value="onjuist" class="js--keuze-4 js--interact" color="lightgrey" position="2.5 -1 -2.8"  width="1.1" height="0.3">
-        <a-text value="eringdilogung" align="center" color="black" width="4"></a-text>
-      </a-plane>
-      <a-plane  value="onjuist" class="js--keuze-4 js--interact" color="lightgrey" position="2.5 0 -2.8"  width="1.1" height="0.3">
-        <a-text value="ering" align="center" color="black" width="4"></a-text>
-      </a-plane>
+      <a-image value="onjuist" class="js--keuze-4 js--interact" position="1 0 -2.8" src="#ogung" align="center" color="lightgrey" width="1" height="0.3"></a-image>
+      <a-image value="juist" class="js--keuze-4 js--interact" src="#juist" color="lightgrey" align="center" position="2.5 -1 -2.8" width="1" height="0.3"></a-image>
+      <a-image value="onjuist" class="js--keuze-4 js--interact" position="2.5 0 -2.8" src="#ering" align="center" color="lightgrey" width="1" height="0.3"></a-image>
+      <a-image value="onjuist" class="js--keuze-4 js--interact" src="#20" color="lightgrey" align="center" position="1 -1 -2.8" width="1" height="0.3"></a-image>
+
     </a-box>
 
     <!-- ===================Puzzelkamer 5=================== -->
