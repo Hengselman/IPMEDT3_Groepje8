@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>VR Escape Room - Afrikaanse talen</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/puzzel_2.js"></script>
+  </head>
+  <body>
+    <a-scene id="js--scene">
+      <a-assets>
+        <a-asset-item id="deur_prototype-obj" src="3dmodels/deur_prototype.obj"></a-asset-item>
+        <a-asset-item id="deur_prototype-mtl" src="3dmodels/deur_prototype.mtl"></a-asset-item>
+        <img id="js--Berber-img" src="img/Berber.png"></img>
+        <img id="js--arabisch-img" src="img/arabisch.PNG"></img>
+        <img id="js--ge'ez-img" src="img/ge'ez.png"></img>
+        <img id="js--oud-egyptisch-img" src="img/oud-egyptisch.png"></img>
+        <img id="js--vai-img" src="img/vai.png"></img>
+        <sound id="mali" src="music/mali.mp4">
+        <sound id="buku" src="music/buku.mp4">
+        <sound id="kiyele" src="music/kiyele.mp4">
+        <img id="cijfers" src="img/puzzel_4.PNG"></img>
+        <img id="20" src="img/20.PNG"></img>
+        <img id="ering" src="img/ering.PNG"></img>
+        <img id="juist" src="img/juist.PNG"></img>
+        <img id="ogung" src="img/ogung.png"></img>
+        <img id="wood" src="img/wood.png"></img>
+        <img id="woodroof" src="img/woodroof.jpg"></img>
+        <img id="bricks" src="img/brickwall.jpg"></img>
+      </a-assets>
+      <a-camera id="js--camera">
+        <a-entity
+          id="js--entityCursor"
+          animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150;
+          from: 0.1 0.1 0.1; to: 1 1 1;"
+          animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1000;
+          from: 1 1 1; to: 0.1 0.1 0.1;"
+          animation="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500;
+          to: 1 1 1;"
+          cursor = "fuse: true; fuseTimeout: 1000"
+          material = "color: black; shader: flat"
+          geometry = "primitive: ring; radiusInner: 0.007; radiusOuter: 0.01"
+          position = "0 0 -0.5"
+          raycaster = "objects: .js--interact"
+        ></a-entity>
+      </a-camera>
+
+    <!--  ===================De puzzelgang====================== -->
+    <!-- Puzzelkamer 1 -->
+    <a-box material="src: #bricks; repeat: 3 2" width="0.2" depth="9" height="4" position="0 1.6 -3" rotation="0 -90 0">
+      <a-box material="src: #wood" width="9" depth="9" height="0.2" position="4.5 -1.7 0"></a-box>
+      <a-box material="src: #bricks; repeat: 3 2" width="9" depth="0.2" height="4" position="4.5 0 4.5"></a-box>
+      <a-box material="src: #bricks; repeat: 3 2" width="9" depth="0.2" height="4" position="4.5 0 -4.5"></a-box>
+      <a-triangle color="red" vertex-a="2.5 4.4 0" vertex-b="-2 0 0" vertex-c="7.5 -0.5 0" position="0 2 2.5" rotation="0 90 0"></a-triangle>
+
+      <!-- Voorkant -->
+      <a-box material="src: #bricks; repeat: 3 2" width="0.2" depth="9" height="4" position="9 0 0"></a-box>
+      <a-triangle color="red" vertex-a="2.5 4.4 0" vertex-b="-2 0 0" vertex-c="7.5 -0.5 0" position="9 2 -2.5" rotation="0 270 0"></a-triangle>
+
+      <!-- Het dak -->
+      <a-box material="src: #woodroof; repeat: 3" width="9" depth="0.2" height="7" position="4.5 4 2.5" rotation="-45 0 0"></a-box>
+      <a-box material="src: #woodroof; repeat: 3" width="9" depth="0.2" height="7" position="4.5 4 -2.5" rotation="45 0 0"></a-box>
+
+      <!-- Horizontale balken -->
+      <a-box color="orange" width="0.2" depth="9" height="0.2" position="8.8 4 0"></a-box>
+      <a-box color="orange" width="0.2" depth="9" height="0.2" position="7 4 0"></a-box>
+      <a-box color="orange" width="0.2" depth="9" height="0.2" position="4.5 4 0"></a-box>
+      <a-box color="orange" width="0.2" depth="9" height="0.2" position="2 4 0"></a-box>
+      <a-box color="orange" width="0.2" depth="9" height="0.2" position="0.2 4 0"></a-box>
+
+      <!-- In de lengte -->
+      <a-box color="orange" width="9" depth="0.2" height="0.2" position="4.5 4 0"></a-box>
+      <a-box color="orange" width="9" depth="0.2" height="0.2" position="4.5 4 2"></a-box>
+      <a-box color="orange" width="9" depth="0.2" height="0.2" position="4.5 4 -2"></a-box>
+
+      <!-- Verticale balken -->
+      <a-box color="orange" width="0.2" depth="0.2" height="2" position="2 5 0"></a-box>
+      <a-box color="orange" width="0.2" depth="0.2" height="2" position="4.5 5 0"></a-box>
+      <a-box color="orange" width="0.2" depth="0.2" height="2" position="7 5 0"></a-box>
+
+      <!-- Schuine balken -->
+      <a-box color="orange" width="0.2" depth="3" height="0.2" position="0.2 5 1" rotation="45 0 0"></a-box>
+      <a-box color="orange" width="0.2" depth="3" height="0.2" position="0.2 5 -1" rotation="-45 0 0"></a-box>
+      <a-box color="orange" width="0.2" depth="3" height="0.2" position="2 5 1" rotation="45 0 0"></a-box>
+      <a-box color="orange" width="0.2" depth="3" height="0.2" position="2 5 -1" rotation="-45 0 0"></a-box>
+      <a-box color="orange" width="0.2" depth="3" height="0.2" position="4.5 5 1" rotation="45 0 0"></a-box>
+      <a-box color="orange" width="0.2" depth="3" height="0.2" position="4.5 5 -1" rotation="-45 0 0"></a-box>
+      <a-box color="orange" width="0.2" depth="3" height="0.2" position="7 5 1" rotation="45 0 0"></a-box>
+      <a-box color="orange" width="0.2" depth="3" height="0.2" position="7 5 -1" rotation="-45 0 0"></a-box>
+      <a-box color="orange" width="0.2" depth="3" height="0.2" position="8.8 5 1" rotation="45 0 0"></a-box>
+      <a-box color="orange" width="0.2" depth="3" height="0.2" position="8.8 5 -1" rotation="-45 0 0"></a-box>
+
+      <!-- Info paneel -->
+      <a-plane color="blue" width="3" height="2" position="8.89 0 0" rotation="0 -90 0">
+        <a-text value="Kijk naar een\nrode knop\nnaast de puzzel\ndie nog opgelost\nmoet worden.\nDit brengt je\nnaar de gekozen\npuzzel." position="-1.4 0 0" color="black" scale="0.8 0.8 0.8"></a-text>
+
+        <a-cylinder id="js--teleportPuzzel1" class="js--interact" color="red" position="0.4 0.6 0" rotation="90 0 0" height="0.05" radius="0.1"></a-cylinder>
+        <a-text value="Puzzel 1" position="0.5 0.6 0" color="black" scale="0.8 0.8 0.8"></a-text>
+
+        <a-cylinder id="js--teleportPuzzel2" class="js--interact" color="red" position="0.4 0.3 0" rotation="90 0 0" height="0.05" radius="0.1"></a-cylinder>
+        <a-text value="Puzzel 2" position="0.5 0.3 0" color="black" scale="0.8 0.8 0.8"></a-text>
+
+        <a-cylinder id="js--teleportPuzzel3" class="js--interact" color="red" position="0.4 0 0" rotation="90 0 0" height="0.05" radius="0.1"></a-cylinder>
+        <a-text value="Puzzel 3" position="0.5 0 0" color="black" scale="0.8 0.8 0.8"></a-text>
+
+        <a-cylinder id="js--teleportPuzzel4" class="js--interact" color="red" position="0.4 -0.3 0" rotation="90 0 0" height="0.05" radius="0.1"></a-cylinder>
+        <a-text value="Puzzel 4" position="0.5 -0.3 0" color="black" scale="0.8 0.8 0.8"></a-text>
+
+        <a-cylinder id="js--teleportPuzzel5" class="js--interact" color="red" position="0.4 -0.6 0" rotation="90 0 0" height="0.05" radius="0.1"></a-cylinder>
+        <a-text value="Puzzel 5" position="0.5 -0.6 0" color="black" scale="0.8 0.8 0.8"></a-text>
+      </a-plane>
+
+      <!-- Puzzelnummer en driehoekCheck -->
+      <a-text value="1" position="0 3 0.2" rotation="0 90 0" align="center" color="black" scale="7 7 7"></a-text>
+    </a-box>
+
+    </a-scene>
+  </body>
+
+  <script src="js/main.js"></script>
+  <!-- <script src="js/puzzel_2.js"></script> -->
+</html>
