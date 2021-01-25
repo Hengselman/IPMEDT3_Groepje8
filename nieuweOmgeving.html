@@ -46,9 +46,80 @@
         ></a-entity>
       </a-camera>
 
-    <!--  ===================De puzzelgang====================== -->
+      <!-- Raadselkamer -->
+      <a-box material="src: #bricks; repeat: 3 2" width="0.2" depth="9" height="4" position="0 1.6 -4.5" rotation="0 -90 0">
+        <a-box material="src: #wood" width="9" depth="9" height="0.2" position="4.5 -1.7 0"></a-box>
+        <a-box material="src: #bricks; repeat: 3 2" width="9" depth="0.2" height="4" position="4.5 0 4.5"></a-box>
+        <a-box material="src: #bricks; repeat: 3 2" width="9" depth="0.2" height="4" position="4.5 0 -4.5"></a-box>
+        <a-triangle color="red" vertex-a="2.5 4.4 0" vertex-b="-2 0 0" vertex-c="7.5 -0.5 0" position="0 2 2.5" rotation="0 90 0"></a-triangle>
+
+        <!-- Voorkant -->
+        <a-box material="src: #bricks; repeat: 3 2" width="0.2" depth="9" height="4" position="9 0 0"></a-box>
+        <a-triangle color="red" vertex-a="2.5 4.4 0" vertex-b="-2 0 0" vertex-c="7.5 -0.5 0" position="9 2 -2.5" rotation="0 270 0"></a-triangle>
+
+        <!-- Het dak -->
+        <a-box material="src: #woodroof; repeat: 3" width="9" depth="0.2" height="7" position="4.5 4 2.5" rotation="-45 0 0"></a-box>
+        <a-box material="src: #woodroof; repeat: 3" width="9" depth="0.2" height="7" position="4.5 4 -2.5" rotation="45 0 0"></a-box>
+
+        <!-- Horizontale balken -->
+        <a-box color="orange" width="0.2" depth="6" height="0.2" position="8.8 4 0"></a-box>
+        <a-box color="orange" width="0.2" depth="6" height="0.2" position="7 4 0"></a-box>
+        <a-box color="orange" width="0.2" depth="6" height="0.2" position="4.5 4 0"></a-box>
+        <a-box color="orange" width="0.2" depth="6" height="0.2" position="2 4 0"></a-box>
+        <a-box color="orange" width="0.2" depth="6" height="0.2" position="0.2 4 0"></a-box>
+
+        <!-- In de lengte -->
+        <a-box color="orange" width="9" depth="0.2" height="0.2" position="4.5 4 0"></a-box>
+        <a-box color="orange" width="9" depth="0.2" height="0.2" position="4.5 4 2"></a-box>
+        <a-box color="orange" width="9" depth="0.2" height="0.2" position="4.5 4 -2"></a-box>
+
+        <!-- Verticale balken -->
+        <a-box color="orange" width="0.2" depth="0.2" height="2" position="2 5 0"></a-box>
+        <a-box color="orange" width="0.2" depth="0.2" height="2" position="4.5 5 0"></a-box>
+        <a-box color="orange" width="0.2" depth="0.2" height="2" position="7 5 0"></a-box>
+
+        <!-- Schuine balken -->
+        <a-box color="orange" width="0.2" depth="3" height="0.2" position="0.2 5 1" rotation="45 0 0"></a-box>
+        <a-box color="orange" width="0.2" depth="3" height="0.2" position="0.2 5 -1" rotation="-45 0 0"></a-box>
+        <a-box color="orange" width="0.2" depth="3" height="0.2" position="2 5 1" rotation="45 0 0"></a-box>
+        <a-box color="orange" width="0.2" depth="3" height="0.2" position="2 5 -1" rotation="-45 0 0"></a-box>
+        <a-box color="orange" width="0.2" depth="3" height="0.2" position="4.5 5 1" rotation="45 0 0"></a-box>
+        <a-box color="orange" width="0.2" depth="3" height="0.2" position="4.5 5 -1" rotation="-45 0 0"></a-box>
+        <a-box color="orange" width="0.2" depth="3" height="0.2" position="7 5 1" rotation="45 0 0"></a-box>
+        <a-box color="orange" width="0.2" depth="3" height="0.2" position="7 5 -1" rotation="-45 0 0"></a-box>
+        <a-box color="orange" width="0.2" depth="3" height="0.2" position="8.8 5 1" rotation="45 0 0"></a-box>
+        <a-box color="orange" width="0.2" depth="3" height="0.2" position="8.8 5 -1" rotation="-45 0 0"></a-box>
+
+        <!-- Info paneel -->
+        <a-plane color="blue" width="3" height="2" position="8.89 0 0" rotation="0 -90 0">
+          <a-text value="Kijk naar een\nrode knop\nnaast de puzzel\ndie nog opgelost\nmoet worden.\nDit brengt je\nnaar de gekozen\npuzzel." position="-1.4 0 0" color="black" scale="0.8 0.8 0.8"></a-text>
+
+          <a-cylinder id="js--teleportRaadsel" class="js--interact" color="red" position="0.4 0.8 0" rotation="90 0 0" height="0.05" radius="0.08"></a-cylinder>
+          <a-text value="Raadselkamer" position="0.5 0.8 0" color="black" scale="0.6 0.6 0.6"></a-text>
+
+          <a-cylinder id="js--teleportPuzzel1" class="js--interact" color="red" position="0.4 0.5 0" rotation="90 0 0" height="0.05" radius="0.08"></a-cylinder>
+          <a-text value="Puzzel 1" position="0.5 0.5 0" color="black" scale="0.6 0.6 0.6"></a-text>
+
+          <a-cylinder id="js--teleportPuzzel2" class="js--interact" color="red" position="0.4 0.2 0" rotation="90 0 0" height="0.05" radius="0.08"></a-cylinder>
+          <a-text value="Puzzel 2" position="0.5 0.2 0" color="black" scale="0.6 0.6 0.6"></a-text>
+
+          <a-cylinder id="js--teleportPuzzel3" class="js--interact" color="red" position="0.4 -0.1 0" rotation="90 0 0" height="0.05" radius="0.08"></a-cylinder>
+          <a-text value="Puzzel 3" position="0.5 -0.1 0" color="black" scale="0.6 0.6 0.6"></a-text>
+
+          <a-cylinder id="js--teleportPuzzel4" class="js--interact" color="red" position="0.4 -0.4 0" rotation="90 0 0" height="0.05" radius="0.08"></a-cylinder>
+          <a-text value="Puzzel 4" position="0.5 -0.4 0" color="black" scale="0.6 0.6 0.6"></a-text>
+
+          <a-cylinder id="js--teleportPuzzel5" class="js--interact" color="red" position="0.4 -0.7 0" rotation="90 0 0" height="0.05" radius="0.08"></a-cylinder>
+          <a-text value="Puzzel 5" position="0.5 -0.7 0" color="black" scale="0.6 0.6 0.6"></a-text>
+        </a-plane>
+
+        <!-- Puzzelnummer en driehoekCheck -->
+        <a-text value="1" position="0 3 0.2" rotation="0 90 0" align="center" color="black" scale="7 7 7"></a-text>
+      </a-box>
+
+
     <!-- Puzzelkamer 1 -->
-    <a-box material="src: #bricks; repeat: 3 2" width="0.2" depth="9" height="4" position="0 1.6 -3" rotation="0 -90 0">
+    <a-box material="src: #bricks; repeat: 3 2" width="0.2" depth="9" height="4" position="-12 1.6 -4.5" rotation="0 -90 0">
       <a-box material="src: #wood" width="9" depth="9" height="0.2" position="4.5 -1.7 0"></a-box>
       <a-box material="src: #bricks; repeat: 3 2" width="9" depth="0.2" height="4" position="4.5 0 4.5"></a-box>
       <a-box material="src: #bricks; repeat: 3 2" width="9" depth="0.2" height="4" position="4.5 0 -4.5"></a-box>
@@ -63,11 +134,82 @@
       <a-box material="src: #woodroof; repeat: 3" width="9" depth="0.2" height="7" position="4.5 4 -2.5" rotation="45 0 0"></a-box>
 
       <!-- Horizontale balken -->
-      <a-box color="orange" width="0.2" depth="9" height="0.2" position="8.8 4 0"></a-box>
-      <a-box color="orange" width="0.2" depth="9" height="0.2" position="7 4 0"></a-box>
-      <a-box color="orange" width="0.2" depth="9" height="0.2" position="4.5 4 0"></a-box>
-      <a-box color="orange" width="0.2" depth="9" height="0.2" position="2 4 0"></a-box>
-      <a-box color="orange" width="0.2" depth="9" height="0.2" position="0.2 4 0"></a-box>
+      <a-box color="orange" width="0.2" depth="6" height="0.2" position="8.8 4 0"></a-box>
+      <a-box color="orange" width="0.2" depth="6" height="0.2" position="7 4 0"></a-box>
+      <a-box color="orange" width="0.2" depth="6" height="0.2" position="4.5 4 0"></a-box>
+      <a-box color="orange" width="0.2" depth="6" height="0.2" position="2 4 0"></a-box>
+      <a-box color="orange" width="0.2" depth="6" height="0.2" position="0.2 4 0"></a-box>
+
+      <!-- In de lengte -->
+      <a-box color="orange" width="9" depth="0.2" height="0.2" position="4.5 4 0"></a-box>
+      <a-box color="orange" width="9" depth="0.2" height="0.2" position="4.5 4 2"></a-box>
+      <a-box color="orange" width="9" depth="0.2" height="0.2" position="4.5 4 -2"></a-box>
+
+      <!-- Verticale balken -->
+      <a-box color="orange" width="0.2" depth="0.2" height="2" position="2 5 0"></a-box>
+      <a-box color="orange" width="0.2" depth="0.2" height="2" position="4.5 5 0"></a-box>
+      <a-box color="orange" width="0.2" depth="0.2" height="2" position="7 5 0"></a-box>
+
+      <!-- Schuine balken -->
+      <a-box color="orange" width="0.2" depth="3" height="0.2" position="0.2 5 1" rotation="45 0 0"></a-box>
+      <a-box color="orange" width="0.2" depth="3" height="0.2" position="0.2 5 -1" rotation="-45 0 0"></a-box>
+      <a-box color="orange" width="0.2" depth="3" height="0.2" position="2 5 1" rotation="45 0 0"></a-box>
+      <a-box color="orange" width="0.2" depth="3" height="0.2" position="2 5 -1" rotation="-45 0 0"></a-box>
+      <a-box color="orange" width="0.2" depth="3" height="0.2" position="4.5 5 1" rotation="45 0 0"></a-box>
+      <a-box color="orange" width="0.2" depth="3" height="0.2" position="4.5 5 -1" rotation="-45 0 0"></a-box>
+      <a-box color="orange" width="0.2" depth="3" height="0.2" position="7 5 1" rotation="45 0 0"></a-box>
+      <a-box color="orange" width="0.2" depth="3" height="0.2" position="7 5 -1" rotation="-45 0 0"></a-box>
+      <a-box color="orange" width="0.2" depth="3" height="0.2" position="8.8 5 1" rotation="45 0 0"></a-box>
+      <a-box color="orange" width="0.2" depth="3" height="0.2" position="8.8 5 -1" rotation="-45 0 0"></a-box>
+
+      <!-- Info paneel -->
+      <a-plane color="blue" width="3" height="2" position="8.89 0 0" rotation="0 -90 0">
+        <a-text value="Kijk naar een\nrode knop\nnaast de puzzel\ndie nog opgelost\nmoet worden.\nDit brengt je\nnaar de gekozen\npuzzel." position="-1.4 0 0" color="black" scale="0.8 0.8 0.8"></a-text>
+
+        <a-cylinder id="js--teleportRaadsel" class="js--interact" color="red" position="0.4 0.8 0" rotation="90 0 0" height="0.05" radius="0.08"></a-cylinder>
+        <a-text value="Raadselkamer" position="0.5 0.8 0" color="black" scale="0.6 0.6 0.6"></a-text>
+
+        <a-cylinder id="js--teleportPuzzel1" class="js--interact" color="red" position="0.4 0.5 0" rotation="90 0 0" height="0.05" radius="0.08"></a-cylinder>
+        <a-text value="Puzzel 1" position="0.5 0.5 0" color="black" scale="0.6 0.6 0.6"></a-text>
+
+        <a-cylinder id="js--teleportPuzzel2" class="js--interact" color="red" position="0.4 0.2 0" rotation="90 0 0" height="0.05" radius="0.08"></a-cylinder>
+        <a-text value="Puzzel 2" position="0.5 0.2 0" color="black" scale="0.6 0.6 0.6"></a-text>
+
+        <a-cylinder id="js--teleportPuzzel3" class="js--interact" color="red" position="0.4 -0.1 0" rotation="90 0 0" height="0.05" radius="0.08"></a-cylinder>
+        <a-text value="Puzzel 3" position="0.5 -0.1 0" color="black" scale="0.6 0.6 0.6"></a-text>
+
+        <a-cylinder id="js--teleportPuzzel4" class="js--interact" color="red" position="0.4 -0.4 0" rotation="90 0 0" height="0.05" radius="0.08"></a-cylinder>
+        <a-text value="Puzzel 4" position="0.5 -0.4 0" color="black" scale="0.6 0.6 0.6"></a-text>
+
+        <a-cylinder id="js--teleportPuzzel5" class="js--interact" color="red" position="0.4 -0.7 0" rotation="90 0 0" height="0.05" radius="0.08"></a-cylinder>
+        <a-text value="Puzzel 5" position="0.5 -0.7 0" color="black" scale="0.6 0.6 0.6"></a-text>
+      </a-plane>
+
+      <!-- Puzzelnummer en driehoekCheck -->
+      <a-text value="1" position="0 3 0.2" rotation="0 90 0" align="center" color="black" scale="7 7 7"></a-text>
+    </a-box>
+
+    <!-- Puzzelkamer 2 -->
+    <a-box material="src: #bricks; repeat: 3 2" width="0.2" depth="9" height="4" position="-24 1.6 -4.5" rotation="0 -90 0">
+      <a-box material="src: #wood" width="9" depth="9" height="0.2" position="4.5 -1.7 0"></a-box>
+      <a-box material="src: #bricks; repeat: 3 2" width="9" depth="0.2" height="4" position="4.5 0 4.5"></a-box>
+      <a-box material="src: #bricks; repeat: 3 2" width="9" depth="0.2" height="4" position="4.5 0 -4.5"></a-box>
+      <a-triangle color="red" vertex-a="2.5 4.4 0" vertex-b="-2 0 0" vertex-c="7.5 -0.5 0" position="0 2 2.5" rotation="0 90 0"></a-triangle>
+
+      <!-- Voorkant -->
+      <a-box material="src: #bricks; repeat: 3 2" width="0.2" depth="9" height="4" position="9 0 0"></a-box>
+      <a-triangle color="red" vertex-a="2.5 4.4 0" vertex-b="-2 0 0" vertex-c="7.5 -0.5 0" position="9 2 -2.5" rotation="0 270 0"></a-triangle>
+
+      <!-- Het dak -->
+      <a-box material="src: #woodroof; repeat: 3" width="9" depth="0.2" height="7" position="4.5 4 2.5" rotation="-45 0 0"></a-box>
+      <a-box material="src: #woodroof; repeat: 3" width="9" depth="0.2" height="7" position="4.5 4 -2.5" rotation="45 0 0"></a-box>
+
+      <!-- Horizontale balken -->
+      <a-box color="orange" width="0.2" depth="6" height="0.2" position="8.8 4 0"></a-box>
+      <a-box color="orange" width="0.2" depth="6" height="0.2" position="7 4 0"></a-box>
+      <a-box color="orange" width="0.2" depth="6" height="0.2" position="4.5 4 0"></a-box>
+      <a-box color="orange" width="0.2" depth="6" height="0.2" position="2 4 0"></a-box>
+      <a-box color="orange" width="0.2" depth="6" height="0.2" position="0.2 4 0"></a-box>
 
       <!-- In de lengte -->
       <a-box color="orange" width="9" depth="0.2" height="0.2" position="4.5 4 0"></a-box>
