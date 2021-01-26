@@ -32,12 +32,4 @@ window.onload = () => {
   }
 
   addListeners();
-
-
-
-    //  let att = document.createAttribute("animation");
-    //  att.value = "property: position; easing: linear; dur: 2000; to: " +
-    //  this.getAttribute('position').x + " 1.6 " + this.getAttribute('position').z;
-    //  camera.setAttribute('animation', att.value);
-  //  });
 }
