@@ -21,6 +21,10 @@
         <sound id="buku" src="music/buku.mp4">
         <sound id="kiyele" src="music/kiyele.mp4">
         <img id="cijfers" src="img/puzzel_4.PNG"></img>
+        <img id="20" src="img/20.PNG"></img>
+        <img id="ering" src="img/ering.PNG"></img>
+        <img id="juist" src="img/juist.PNG"></img>
+        <img id="ogung" src="img/ogung.png"></img>
       </a-assets>
       <a-camera id="js--camera">
         <a-entity
@@ -40,10 +44,36 @@
       </a-camera>
 
     <!--  ===================De puzzelgang====================== -->
-    <!-- Beginkamertje -->
-    <a-box color="#d3d3d3" width="0.2" depth="6" height="2.2" position="-2.5 1.1 -1"></a-box>
-    <a-box color="#d3d3d3" width="0.2" depth="6" height="2.2" position="2.5 1.1 -1"></a-box>
-    <a-box color="#d3d3d3" width="5" depth="0.2" height="3.7" position="0 1.85 2"></a-box>
+    <!-- Startkamer -->
+    <a-box color="#d3d3d3" width="0.2" depth="6" height="3.7" position="-9.5 1.85 -5">
+      <a-box color="#d3d3d3" width="7" depth="0.2" height="3.7" position="3.5 0 3"></a-box>
+      <a-box color="#d3d3d3" width="7" depth="0.2" height="3.7" position="3.5 0 -3"></a-box>
+
+      <!-- Het dak -->
+      <a-box color="#d3d3d3" width="7" depth="0.2" height="4.2" position="3.5 3 1.5" rotation="-45 0 0"></a-box>
+      <a-box color="#d3d3d3" width="7" depth="0.2" height="4.2" position="3.5 3 -1.5" rotation="45 0 0"></a-box>
+
+      <!-- Horizontale balken -->
+      <a-box color="orange" width="0.2" depth="6" height="0.2" position="5 1.5 0"></a-box>
+      <a-box color="orange" width="0.2" depth="6" height="0.2" position="2 1.5 0"></a-box>
+      <a-box color="orange" width="7" depth="0.2" height="0.2" position="3.5 1.5 0"></a-box>
+      <a-box color="orange" width="7" depth="0.2" height="0.2" position="3.5 1.5 2.7"></a-box>
+      <a-box color="orange" width="7" depth="0.2" height="0.2" position="3.5 1.5 -2.7"></a-box>
+
+      <!-- Verticale balken -->
+      <a-box color="orange" width="0.2" depth="0.2" height="2.5" position="2 2.7 0"></a-box>
+      <a-box color="orange" width="0.2" depth="0.2" height="2.5" position="5 2.7 0"></a-box>
+
+      <!-- Schuine balken -->
+      <a-box color="orange" width="0.2" depth="4.3" height="0.2" position="2 2.75 1.45" rotation="45 0 0"></a-box>
+      <a-box color="orange" width="0.2" depth="4.3" height="0.2" position="2 2.75 -1.45" rotation="-45 0 0"></a-box>
+      <a-box color="orange" width="0.2" depth="4.3" height="0.2" position="5 2.75 1.45" rotation="45 0 0"></a-box>
+      <a-box color="orange" width="0.2" depth="4.3" height="0.2" position="5 2.75 -1.45" rotation="-45 0 0"></a-box>
+
+      <!-- Puzzelnummer en driehoekCheck -->
+      <a-triangle id="js--puzzel1Finished" color="red" vertex-a="2.5 2.4 0" vertex-c="5.5 -0.5 0" position="7.01 2 2.5" rotation="0 90 0"></a-triangle>
+      <a-text value="1" position="7.02 3 0.2" rotation="0 90 0" align="center" color="black" scale="7 7 7"></a-text>
+    </a-box>
 
     <!-- Lange wand gang -->
     <a-box color="#d3d3d3" width="0.2" depth="25" height="1.5" position="-2.5 2.9 -10.5"></a-box>
@@ -311,18 +341,11 @@
       <a-image src="#cijfers" position="-1.5 -0.5 -2.8" height="1.5" width="3"></a-image>
 
       <a-text value="Kies hier het juiste antwoord: " position="0.5 0.5 -2.8" color="black" height="2" width="4"></a-text>
-      <a-plane value="onjuist" class="js--keuze-4 js--interact" color="lightgrey" position="1 0 -2.8" width="1.1" height="0.3">
-     <a-text value="ogung" align="center" color="black" width="4"></a-text>
-     </a-plane>
-      <a-plane value="juist" class="js--keuze-4 js--interact" color="lightgrey" position="1 -1 -2.8" width="1.1" height="0.3">
-      <a-text value="etadilogung" align="center" color="black" width="4"></a-text>
-      </a-plane>
-      <a-plane  value="onjuist" class="js--keuze-4 js--interact" color="lightgrey" position="2.5 -1 -2.8"  width="1.1" height="0.3">
-        <a-text value="eringdilogung" align="center" color="black" width="4"></a-text>
-      </a-plane>
-      <a-plane  value="onjuist" class="js--keuze-4 js--interact" color="lightgrey" position="2.5 0 -2.8"  width="1.1" height="0.3">
-        <a-text value="ering" align="center" color="black" width="4"></a-text>
-      </a-plane>
+      <a-image value="onjuist" class="js--keuze-4 js--interact" position="1 0 -2.8" src="#ogung" align="center" color="lightgrey" width="1" height="0.3"></a-image>
+      <a-image value="juist" class="js--keuze-4 js--interact" src="#juist" color="lightgrey" align="center" position="2.5 -1 -2.8" width="1" height="0.3"></a-image>
+      <a-image value="onjuist" class="js--keuze-4 js--interact" position="2.5 0 -2.8" src="#ering" align="center" color="lightgrey" width="1" height="0.3"></a-image>
+      <a-image value="onjuist" class="js--keuze-4 js--interact" src="#20" color="lightgrey" align="center" position="1 -1 -2.8" width="1" height="0.3"></a-image>
+
     </a-box>
 
     <!-- ===================Puzzelkamer 5=================== -->
