@@ -325,46 +325,55 @@ window.onload = () => {
   }
 
   console.log("Script laad in");
-  const teleportRaadsel = document.getElementById('js--teleportRaadsel')
-  const teleport1 = document.getElementById('js--teleportPuzzel1')
-  const teleport2 = document.getElementById('js--teleportPuzzel2')
-  const teleport3 = document.getElementById('js--teleportPuzzel3')
-  const teleport4 = document.getElementById('js--teleportPuzzel4')
-  const teleport5 = document.getElementById('js--teleportPuzzel5')
+  const teleportRaadsel = document.getElementsByClassName('js--teleportRaadsel')
+  const teleport1 = document.getElementsByClassName('js--teleportPuzzel1')
+  const teleport2 = document.getElementsByClassName('js--teleportPuzzel2')
+  const teleport3 = document.getElementsByClassName('js--teleportPuzzel3')
+  const teleport4 = document.getElementsByClassName('js--teleportPuzzel4')
+  const teleport5 = document.getElementsByClassName('js--teleportPuzzel5')
 
   const camera = document.getElementById('js--camera');
 
-  function addListeners(){
-    teleportRaadsel.addEventListener('click', function(evt){
+  for (var i =0; i < teleportRaadsel.length; i++){
+    teleportRaadsel[i].addEventListener('click', function(evt){
       camera.setAttribute('position', "0 1.6 0")
       console.log("Teleporteer naar raadsel, whoosh.");
     });
+  }
 
-    teleport1.addEventListener('click', function(evt){
+  for (var i =0; i < teleport1.length; i++){
+    teleport1[i].addEventListener('click', function(evt){
       camera.setAttribute('position', "-12 1.6 0")
       console.log("Teleporteer naar puzzel 1, whoosh.");
     });
+  }
 
-    teleport2.addEventListener('click', function(evt){
+  for (var i =0; i < teleport2.length; i++){
+    teleport2[i].addEventListener('click', function(evt){
       camera.setAttribute('position', "-24 1.6 0")
       console.log("Teleporteer naar puzzel 2, whoosh.");
     });
+  }
 
-    teleport3.addEventListener('click', function(evt){
+  for (var i =0; i < teleport3.length; i++){
+    teleport3[i].addEventListener('click', function(evt){
       camera.setAttribute('position', "0 1.6 -12")
       console.log("Teleporteer naar puzzel 3, whoosh.");
     });
+  }
 
-    teleport4.addEventListener('click', function(evt){
+  for (var i =0; i < teleport4.length; i++){
+    teleport4[i].addEventListener('click', function(evt){
       camera.setAttribute('position', "-12 1.6 -12")
       console.log("Teleporteer naar puzzel 4, whoosh.");
     });
+  }
 
-    teleport5.addEventListener('click', function(evt){
+  for (var i =0; i < teleport5.length; i++){
+    teleport5[i].addEventListener('click', function(evt){
       camera.setAttribute('position', "-24 1.6 -12")
       console.log("Teleporteer naar puzzel 5, whoosh.");
     });
   }
 
-  addListeners();
 }
