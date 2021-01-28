@@ -230,10 +230,11 @@
         </a-plane>
 
         <!-- Verzamelde letters -->
-        <a-plane color="black" width="5" height="0.1" position="8.88 1 -1.5" rotation="0 -90 0">
+        <a-plane color="black" width="5" height="0.1" position="8.88 0.7 -1.5" rotation="0 -90 0">
           <a-plane color="white" width="5" height="1" position="0 -0.5 -0.01" rotation="0 0 0"></a-plane>
           <a-plane color="black" width="5" height="0.1" position="0 -1 0" rotation="0 0 0"></a-plane>
 
+          <!-- Zwarte randen -->
           <a-plane color="black" width="0.1" height="1" position="-2.5 -0.5 0" rotation="0 0 0"></a-plane>
           <a-plane color="black" width="0.1" height="1" position="-1.5 -0.5 0" rotation="0 0 0"></a-plane>
           <a-plane color="black" width="0.1" height="1" position="-0.5 -0.5 0" rotation="0 0 0"></a-plane>
@@ -241,6 +242,21 @@
           <a-plane color="black" width="0.1" height="1" position="1.5 -0.5 0" rotation="0 0 0"></a-plane>
           <a-plane color="black" width="0.1" height="1" position="2.5 -0.5 0" rotation="0 0 0"></a-plane>
 
+          <!-- De letters -->
+          <a-plane color="white" width="4.2" height="0.4" position="0 0.5 0"></a-plane>
+          <a-text position="0 0.5 0" width ="3" value="Wat maakt geen geluid als het valt?" align="center" color="black" scale="2 2 2"></a-text>
+          <a-text id="js--eersteLetter" position="-2 -0.5 0" width ="3" value="A" align="center" color="black" scale="4 4 4"></a-text>
+          <a-text id="js--tweedeLetter" position="-1 -0.5 0" width ="3" value="H" align="center" color="black" scale="4 4 4"></a-text>
+          <a-text id="js--derdeLetter" position="0 -0.5 0" width ="3" value="C" align="center" color="black" scale="4 4 4"></a-text>
+          <a-text id="js--vierdeLetter" position="1 -0.5 0" width ="3" value="T" align="center" color="black" scale="4 4 4"></a-text>
+          <a-text id="js--vijfdeLetter" position="2 -0.5 0" width ="3" value="N" align="center" color="black" scale="4 4 4"></a-text>
+w
+          <!-- Pijl naar onderen -->
+          <a-triangle id="js--rodePijl1" class="js--rodePijl" color="red" rotation="0 0 180" scale="0.5 0.5 0.5" position="-2 -1.5 0"></a-triangle>
+          <a-triangle id="js--rodePijl2" class="js--rodePijl" color="red" rotation="0 0 180" scale="0.5 0.5 0.5" position="-1 -1.5 0"></a-triangle>
+          <a-triangle id="js--rodePijl3" class="js--rodePijl" color="red" rotation="0 0 180" scale="0.5 0.5 0.5" position="0 -1.5 0"></a-triangle>
+          <a-triangle id="js--rodePijl4" class="js--rodePijl" color="red" rotation="0 0 180" scale="0.5 0.5 0.5" position="1 -1.5 0"></a-triangle>
+          <a-triangle id="js--rodePijl5" class="js--rodePijl" color="red" rotation="0 0 180" scale="0.5 0.5 0.5" position="2 -1.5 0"></a-triangle>
         </a-plane>
 
         <!-- Bureau -->
