@@ -20,6 +20,7 @@ window.onload = () => {
   var geel_value = document.getElementsByClassName("geel_value");
   var controle_text = document.getElementsByClassName("controle_text");
   var antwoord_opgeslagen = "";
+  var triagle = document.getElementsByClassName('js--triangle');
 
   for(let i = 0; i < ni.length; i++){
     ni[i].onmouseenter = (event) => {
@@ -181,6 +182,12 @@ window.onload = () => {
       controle_text[i].setAttribute("value" , "Goede antwoord");
       controle_text[i].setAttribute("color", "green");
       console.log("goede antwoord");
+      for(let j = 0; j < triagle.length; j++){
+        if(schriftKleur1 == "green" && schriftKleur2 == "green" && schriftKleur3 == "green" && schriftKleur4 == "green" && schriftKleur5 == "green"){
+          triagle[j].getAttribute("color");
+          triagle[j].setAttribute("color", "green");
+        }
+      }
     }else{
       controle_text[i].setAttribute("value" , "Foute antwoord");
       controle_text[i].setAttribute("color", "red");
@@ -236,6 +243,12 @@ window.onload = () => {
           correct[j].setAttribute("value", "Gefeliciteerd! je hebt de puzzel opgelost en hiervoor krijg je de volgende letter: A");
         }
       }
+      for(let j = 0; j < triagle.length; j++){
+        if(schriftKleur1 == "green" && schriftKleur2 == "green" && schriftKleur3 == "green" && schriftKleur4 == "green" && schriftKleur5 == "green"){
+          triagle[j].getAttribute("color");
+          triagle[j].setAttribute("color", "green");
+        }
+      }
 
     }
   }
@@ -286,6 +299,12 @@ window.onload = () => {
           correct_puzzel_3[j].setAttribute("value", "Gefeliciteerd! je hebt de puzzel opgelost en hiervoor krijg je de volgende letter: C");
         }
       }
+      for(let j = 0; j < triagle.length; j++){
+        if(gemaakteKeuze1 == "lightgreen" && gemaakteKeuze2 == "lightgreen" && gemaakteKeuze3 == "lightgreen"){
+          triagle[j].getAttribute("color");
+          triagle[j].setAttribute("color", "green");
+        }
+      }
     }
   }
 
@@ -312,6 +331,12 @@ window.onload = () => {
           if(keuzeKleur_4 == "green"){
             correct_4[j].getAttribute("value");
             correct_4[j].setAttribute("value", "Gefeliciteerd! je hebt de puzzel opgelost en hiervoor krijg je de volgende letter: T");
+          }
+        }
+        for(let j = 0; j < triagle.length; j++){
+          if(keuzeKleur_4 == "green"){
+            triagle[j].getAttribute("color");
+            triagle[j].setAttribute("color", "green");
           }
         }
         for(let j = 0; j < moetWeg.length; j++){
