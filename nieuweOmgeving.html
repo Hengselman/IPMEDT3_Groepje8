@@ -56,11 +56,102 @@
           position = "0 0 -0.5"
           raycaster = "objects: .js--interact"
         ></a-entity>
+
         <a-obj-model src="#notitieblaadje-obj" mtl="#notitieblaadje-mtl" position="1 -1 -1" rotation="0 -90 5" scale="0.5 0.5 0.5"></a-obj-model>
+        <a-text id="js--a" position="0.8 -0.5 -1" width ="3" value="A" align="center" color="black" rotation="0 0 10"></a-text>
+        <a-text id="js--n" position="1 -0.5 -1" width ="3" value="N" align="center" color="black" rotation="0 0 -5"></a-text>
+        <a-text id="js--t" position="1.2 -0.5 -1" width ="3" value="T" align="center" color="black"></a-text>
+        <a-text id="js--h" position="0.8 -0.62 -1" width ="3" value="H" align="center" color="black" rotation="0 0 -8"></a-text>
+        <a-text id="js--c" position="1.05 -0.66 -1" width ="3" value="C" align="center" color="black"></a-text>
       </a-camera>
 
-      <!-- Aan de camera vast -->
+      <!-- Kantoor van Professor -->
+      <a-box material="src: #bricks; repeat: 3 2" width="0.2" depth="9" height="4" position="0 1.6 13.5" rotation="0 -270 0">
+        <a-box material="src: #wood;" width="9" depth="9" height="0.2" position="4.5 -1.7 0"></a-box>
+        <a-box material="src: #bricks; repeat: 3 2" width="9" depth="0.2" height="4" position="4.5 0 4.5"></a-box>
+        <a-box material="src: #bricks; repeat: 3 2" width="9" depth="0.2" height="4" position="4.5 0 -4.5"></a-box>
+        <a-triangle class="js--triangle" color="red" vertex-a="2.5 4.4 0" vertex-b="-2 0 0" vertex-c="7.5 -0.5 0" position="0 2 2.5" rotation="0 90 0"></a-triangle>
 
+        <!-- Het dak -->
+        <a-box material="src: #woodroof; repeat: 3" width="9" depth="0.2" height="7" position="4.5 4 2.5" rotation="-45 0 0"></a-box>
+        <a-box material="src: #woodroof; repeat: 3" width="9" depth="0.2" height="7" position="4.5 4 -2.5" rotation="45 0 0"></a-box>
+
+        <!-- Horizontale balken -->
+        <a-box material="src: #woodpole;" width="0.2" depth="6" height="0.2" position="8.8 4 0"></a-box>
+        <a-box material="src: #woodpole;" width="0.2" depth="6" height="0.2" position="7 4 0"></a-box>
+        <a-box material="src: #woodpole;" width="0.2" depth="6" height="0.2" position="4.5 4 0"></a-box>
+        <a-box material="src: #woodpole;" width="0.2" depth="6" height="0.2" position="2 4 0"></a-box>
+        <a-box material="src: #woodpole;" width="0.2" depth="6" height="0.2" position="0.2 4 0"></a-box>
+
+        <!-- In de lengte -->
+        <a-box material="src: #woodpole;" width="9" depth="0.2" height="0.2" position="4.5 4 0"></a-box>
+        <a-box material="src: #woodpole;" width="9" depth="0.2" height="0.2" position="4.5 4 2"></a-box>
+        <a-box material="src: #woodpole;" width="9" depth="0.2" height="0.2" position="4.5 4 -2"></a-box>
+
+        <!-- Verticale balken -->
+        <a-box material="src: #woodpole;" width="0.2" depth="0.2" height="2" position="2 5 0"></a-box>
+        <a-box material="src: #woodpole;" width="0.2" depth="0.2" height="2" position="4.5 5 0"></a-box>
+        <a-box material="src: #woodpole;" width="0.2" depth="0.2" height="2" position="7 5 0"></a-box>
+
+        <!-- Schuine balken -->
+        <a-box material="src: #woodpole;" width="0.2" depth="3" height="0.2" position="0.2 5 1" rotation="45 0 0"></a-box>
+        <a-box material="src: #woodpole;" width="0.2" depth="3" height="0.2" position="0.2 5 -1" rotation="-45 0 0"></a-box>
+        <a-box material="src: #woodpole;" width="0.2" depth="3" height="0.2" position="2 5 1" rotation="45 0 0"></a-box>
+        <a-box material="src: #woodpole;" width="0.2" depth="3" height="0.2" position="2 5 -1" rotation="-45 0 0"></a-box>
+        <a-box material="src: #woodpole;" width="0.2" depth="3" height="0.2" position="4.5 5 1" rotation="45 0 0"></a-box>
+        <a-box material="src: #woodpole;" width="0.2" depth="3" height="0.2" position="4.5 5 -1" rotation="-45 0 0"></a-box>
+        <a-box material="src: #woodpole;" width="0.2" depth="3" height="0.2" position="7 5 1" rotation="45 0 0"></a-box>
+        <a-box material="src: #woodpole;" width="0.2" depth="3" height="0.2" position="7 5 -1" rotation="-45 0 0"></a-box>
+        <a-box material="src: #woodpole;" width="0.2" depth="3" height="0.2" position="8.8 5 1" rotation="45 0 0"></a-box>
+        <a-box material="src: #woodpole;" width="0.2" depth="3" height="0.2" position="8.8 5 -1" rotation="-45 0 0"></a-box>
+
+        <!-- Bureau -->
+        <a-box color="#654321" width="1" height="0.2" depth="2" position="0.6 -0.6 0">
+          <a-box color="brown" width="0.2" height="1" depth="0.2" position="0.35 -0.6 0.85"></a-box>
+          <a-box color="brown" width="0.2" height="1" depth="0.2" position="-0.35 -0.6 0.85"></a-box>
+          <a-box color="brown" width="0.2" height="1" depth="0.2" position="0.35 -0.6 -0.85"></a-box>
+          <a-box color="brown" width="0.2" height="1" depth="0.2" position="-0.35 -0.6 -0.85"></a-box>
+        </a-box>
+
+        <!-- Stoel -->
+        <a-box color="#654321" width="0.6" height="0.1" depth="0.5" position="1.5 -0.9 0.2" rotation="0 -20 0">
+          <a-box color="#654321" width="0.1" height="0.8" depth="0.1" position="0.25 -0.4 0.2"></a-box>
+          <a-box color="#654321" width="0.1" height="0.8" depth="0.1" position="0.25 -0.4 -0.2"></a-box>
+          <a-box color="#654321" width="0.1" height="0.8" depth="0.1" position="-0.25 -0.4 0.2"></a-box>
+          <a-box color="#654321" width="0.1" height="0.8" depth="0.1" position="-0.25 -0.4 -0.2"></a-box>
+          <a-box color="#654321" width="0.08" height="0.6" depth="0.08" position="0.25 0.35 -0.2"></a-box>
+          <a-box color="#654321" width="0.08" height="0.6" depth="0.08" position="0.25 0.35 0.2"></a-box>
+          <a-box color="#654321" width="0.08" height="0.08" depth="0.5" position="0.25 0.35 0"></a-box>
+          <a-box color="#654321" width="0.08" height="0.08" depth="0.5" position="0.25 0.6 0"></a-box>
+        </a-box>
+
+        <!-- Boekenkast -->
+        <a-box color="#3f2a14" width="1.9" height="0.1" depth="0.5" position="2.5 -1.5 4" rotation="0 0 0">
+          <a-box color="#52361b" width="2" height="3" depth="0.1" position="0 1.5 0.2" rotation="0 0 0"></a-box>
+          <a-box color="#3f2a14" width="1.9" height="0.1" depth="0.5" position="0 1 0" rotation="0 0 0"></a-box>
+          <a-box color="#3f2a14" width="1.9" height="0.1" depth="0.5" position="0 2 0" rotation="0 0 0"></a-box>
+          <a-box color="#3f2a14" width="1.9" height="0.1" depth="0.5" position="0 3 0" rotation="0 0 0"></a-box>
+          <a-box color="#654321" width="0.1" height="3.1" depth="0.5" position="-1 1.5 0" rotation="0 0 0"></a-box>
+          <a-box color="#654321" width="0.1" height="3.1" depth="0.5" position="1 1.5 0" rotation="0 0 0"></a-box>
+
+            <!-- Boeken -->
+          <a-box color="white" width="0.07" depth="0.25" height="0.3" position="-0.60 1.2 -0.05">
+            <a-box color="blue" width="0.01" depth="0.28" height="0.32" position="0.04 0 0.01"></a-box>
+            <a-box color="blue" width="0.01" depth="0.28" height="0.32" position="-0.04 0 0.01"></a-box>
+            <a-cylinder color="blue" position="0 0 -0.06" height="0.32" radius="0.08" open-ended="true" theta-start="150" theta-length="60"></a-cylinder>
+          </a-box>
+          <a-box color="white" width="0.07" depth="0.25" height="0.3" position="-0.70 1.2 -0.05">
+            <a-box color="red" width="0.01" depth="0.28" height="0.32" position="0.04 0 0.01"></a-box>
+            <a-box color="red" width="0.01" depth="0.28" height="0.32" position="-0.04 0 0.01"></a-box>
+            <a-cylinder color="red" position="0 0 -0.06" height="0.32" radius="0.08" open-ended="true" theta-start="150" theta-length="60"></a-cylinder>
+          </a-box>
+          <a-box color="white" width="0.07" depth="0.25" height="0.3" position="-0.85 1.21 -0.05" rotation="0 0 20">
+            <a-box color="green" width="0.01" depth="0.28" height="0.32" position="0.04 0 0.01"></a-box>
+            <a-box color="green" width="0.01" depth="0.28" height="0.32" position="-0.04 0 0.01"></a-box>
+            <a-cylinder color="green" position="0 0 -0.06" height="0.32" radius="0.08" open-ended="true" theta-start="150" theta-length="60"></a-cylinder>
+          </a-box>
+        </a-box>
+      </a-box>
 
       <!-- Raadselkamer -->
       <a-box material="src: #bricks; repeat: 3 2" width="0.2" depth="9" height="4" position="0 1.6 -4.5" rotation="0 -90 0">

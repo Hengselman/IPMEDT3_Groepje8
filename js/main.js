@@ -32,6 +32,11 @@ window.onload = () => {
   let teleport4 = document.getElementsByClassName('js--teleportPuzzel4')
   let teleport5 = document.getElementsByClassName('js--teleportPuzzel5')
   let correct2 = document.getElementsByClassName('js--correct-2')
+  const letterA = document.getElementById('js--a')
+  const letterN = document.getElementById('js--n')
+  const letterT = document.getElementById('js--t')
+  const letterH = document.getElementById('js--h')
+  const letterC = document.getElementById('js--c')
 
   const camera = document.getElementById('js--camera');
 
@@ -342,6 +347,9 @@ window.onload = () => {
           teleport3[j].getAttribute("color");
           teleport3[j].setAttribute("color", "green");
         }
+      }
+      if(gemaakteKeuze1 == "lightgreen" && gemaakteKeuze2 == "lightgreen" && gemaakteKeuze3 == "lightgreen"){
+        letterT.setAttribute("position", "1.2 -0.5 -0.9");
       }
     }
   }
