@@ -25,6 +25,14 @@ window.onload = () => {
   var triagle3 = document.getElementsByClassName('js--triangle-3');
   var triagle4 = document.getElementsByClassName('js--triangle-4');
   var triagle5 = document.getElementsByClassName('js--triangle-5');
+  const teleportRaadsel = document.getElementsByClassName('js--teleportRaadsel')
+  let teleport1 = document.getElementsByClassName('js--teleportPuzzel1')
+  let teleport2 = document.getElementsByClassName('js--teleportPuzzel2')
+  let teleport3 = document.getElementsByClassName('js--teleportPuzzel3')
+  let teleport4 = document.getElementsByClassName('js--teleportPuzzel4')
+  let teleport5 = document.getElementsByClassName('js--teleportPuzzel5')
+
+  const camera = document.getElementById('js--camera');
 
   for(let i = 0; i < ni.length; i++){
     ni[i].onmouseenter = (event) => {
@@ -192,6 +200,12 @@ window.onload = () => {
           triagle2[j].setAttribute("color", "green");
         }
       }
+      for(let j = 0; j < teleport2.length; j++){
+        if(schriftKleur1 == "green" && schriftKleur2 == "green" && schriftKleur3 == "green" && schriftKleur4 == "green" && schriftKleur5 == "green"){
+          teleport2[j].getAttribute("color");
+          teleport2[j].setAttribute("color", "green");
+        }
+      }
     }else{
       controle_text[i].setAttribute("value" , "Foute antwoord");
       controle_text[i].setAttribute("color", "red");
@@ -254,6 +268,13 @@ window.onload = () => {
         }
       }
 
+      for(let j = 0; j < teleport1.length; j++){
+        if(schriftKleur1 == "green" && schriftKleur2 == "green" && schriftKleur3 == "green" && schriftKleur4 == "green" && schriftKleur5 == "green"){
+          teleport1[j].getAttribute("color");
+          teleport1[j].setAttribute("color", "green");
+        }
+      }
+
     }
   }
 
@@ -309,6 +330,12 @@ window.onload = () => {
           triagle3[j].setAttribute("color", "green");
         }
       }
+      for(let j = 0; j < teleport3.length; j++){
+        if(gemaakteKeuze1 == "lightgreen" && gemaakteKeuze2 == "lightgreen" && gemaakteKeuze3 == "lightgreen"){
+          teleport3[j].getAttribute("color");
+          teleport3[j].setAttribute("color", "green");
+        }
+      }
     }
   }
 
@@ -343,6 +370,12 @@ window.onload = () => {
             triagle4[j].setAttribute("color", "green");
           }
         }
+        for(let j = 0; j < teleport4.length; j++){
+          if(keuzeKleur_4 == "green"){
+            teleport4[j].getAttribute("color");
+            teleport4[j].setAttribute("color", "green");
+          }
+        }
         for(let j = 0; j < moetWeg.length; j++){
           if(keuzeKleur_4 == "green"){
             moetWeg[j].getAttribute("value");
@@ -352,16 +385,6 @@ window.onload = () => {
 
       }
   }
-
-  console.log("Script laad in");
-  const teleportRaadsel = document.getElementsByClassName('js--teleportRaadsel')
-  const teleport1 = document.getElementsByClassName('js--teleportPuzzel1')
-  const teleport2 = document.getElementsByClassName('js--teleportPuzzel2')
-  const teleport3 = document.getElementsByClassName('js--teleportPuzzel3')
-  const teleport4 = document.getElementsByClassName('js--teleportPuzzel4')
-  const teleport5 = document.getElementsByClassName('js--teleportPuzzel5')
-
-  const camera = document.getElementById('js--camera');
 
   for (var i =0; i < teleportRaadsel.length; i++){
     teleportRaadsel[i].addEventListener('click', function(evt){
