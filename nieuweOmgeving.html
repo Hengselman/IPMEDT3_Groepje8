@@ -195,7 +195,13 @@
       <!-- De puzzel zelf -->
       <a-box position="2.91 0 0.4" color="black" height="0.001" width="0.001" depth="0.001" rotation="0 90 0">
         <!-- Voor uitleg -->
-        <a-text class="js--a" value="Hoe veel schriften zijn er op de wereld? In Europa is er bijvoorbeeld het Latijnse alfabet, geschikt voor allerlei verschillende talen. Maar in Afrika gaat het net even anders: sommige Afrikaanse talen hebben hun eigen schrift, dat je voor geen enkele andere taal kunt gebruiken. Kijk maar naar de volgende vijf talen. Maar welk schrift hoort bij welke taal?" position="-4 0 2" rotation="0 90 0" color="black" height="2" width="4"></a-text>
+        <a-plane color="lightgrey" position="-3.9 0 2" rotation="0 90 0"  width="3.2" height="1.5">
+         <a-text align="center"class="js--a" value="Hoe veel schriften zijn er op de wereld? In Europa is er bijvoorbeeld het Latijnse alfabet, geschikt voor allerlei verschillende talen. Maar in Afrika gaat het net even anders: sommige Afrikaanse talen hebben hun eigen schrift, dat je voor geen enkele andere taal kunt gebruiken. Kijk maar naar de volgende vijf talen. Maar welk schrift hoort bij welke taal?" color="black" width="3"></a-text>
+        </a-plane>
+
+        <a-plane color="lightgrey" position="0.4 1.7 -2.8"  width="3.2" height="0.5">
+         <a-text align="center" value="Match de taal met het bijbehorende schrift." color="black" width="3"></a-text>
+       </a-plane>
         <!-- Alle schriften -->
          <a-image class="js--keuze-schrift js--interact" value="Berber" color="lightgrey" src="#js--Berber-img" position="-0.75 1 -2.8" height="0.3" width="1"></a-image>
          <a-image class="js--keuze-schrift js--interact" value="Arabisch" color="lightgrey" src="#js--arabisch-img" position="-0.75 0.5 -2.8" height="0.3" width="1"></a-image>
@@ -364,25 +370,29 @@
       <!-- Puzzelnummer en driehoekCheck -->
       <a-text value="3" position="0 3 0.2" rotation="0 90 0" align="center" color="black" scale="7 7 7"></a-text>
     </a-box>
-    <a-box position="-6 1.6 -11" color="black" height="0.001" width="0.001" depth="0.001">
+    <a-box position="0 1.6 -12" color="black" height="0.001" width="0.001" depth="0.001">
       <!-- Voor uitleg -->
-      <a-text class="js--correct-3" value="In een zogenoemde toontaal heeft elke lettergreep een vaste toonhoogte, zoals hoog, laag,
-      dalend of stijgend, en is die toonhoogte wat we noemen contrastief. Dat wil zeggen dat de betekenis van een woord enkel en alleen afhangt van de toonhoogte waarop het wordt uitgesproken. Ongeveer 60-70% van de talen op de wereld maakt gebruik van zulke contrastieve toon, en in Afrika weten ze er zeker wel raad mee! In het Teke-Kukuya bijvoorbeeld (gesproken in Congo) betekent buku met twee lage tonen ‘onderdeel’, maar betekent buku met twee hoge tonen ‘boek’! Welke tonen hoor je in de volgende Teke-Kukuya woorden?" position="-3 0 2" rotation="0 90 0" color="black" height="2" width="4"></a-text>
+      <a-plane rotation="0 90 0" color="lightgrey" position="-4.3 0 0"  width="4" height="2.2">
+       <a-text class="js--correct-3" align="center" value="In een zogenoemde toontaal heeft elke lettergreep een vaste toonhoogte, zoals hoog, laag,
+       dalend of stijgend, en is die toonhoogte wat we noemen contrastief. Dat wil zeggen dat de betekenis van een woord enkel en alleen afhangt van de toonhoogte waarop het wordt uitgesproken. Ongeveer 60-70% van de talen op de wereld maakt gebruik van zulke contrastieve toon, en in Afrika weten ze er zeker wel raad mee! In het Teke-Kukuya bijvoorbeeld (gesproken in Congo) betekent buku met twee lage tonen ‘onderdeel’, maar betekent buku met twee hoge tonen ‘boek’! Welke tonen hoor je in de volgende Teke-Kukuya woorden?" color="black" width="3"></a-text>
+     </a-plane>
+     <a-plane color="lightgrey" position="0 0.75 -4.35"  width="3.2" height="0.6">
+      <a-text align="center" value="Het is de bedoeling dat je eerst op een bol klikt om het geluid af te spelen en daarna klik je op de toon die erbij hoort." color="black" width="3"></a-text>
+    </a-plane>
 
-      <a-text value="Het is de bedoeling dat je eerst op een bol klikt om het geluid af te spelen en daarna klik je op de toon die erbij hoort." position="-1.5 0.75 -2.8" color="black" height="2" width="3"></a-text>
 
-      <a-sphere class="js--sphere-3 js--interact" value="hoog-laag" sound="src: #mali; volume: 2; loop: false; on: mouseenter;" color="lightpink" radius="0.2" position="2 -1.1 -2.25"></a-sphere>
-      <a-sphere class="js--sphere-3 js--interact" value="hoog-hoog" sound="src: #buku; volume: 2; loop: false; on: mouseenter;" color="lightpink" radius="0.2" position="0 -1.1 -2.25"></a-sphere>
-      <a-sphere class="js--sphere-3 js--interact" value="laag-hoog-laag" sound="src: #kiyele; volume: 2; loop: false; on: mouseenter;" color="lightpink" radius="0.2" position="-2 -1.1 -2.25"></a-sphere>
+      <a-sphere class="js--sphere-3 js--interact" value="hoog-laag" sound="src: #mali; volume: 2; loop: false; on: mouseenter;" color="lightpink" radius="0.2" position="2 -1.1 -4.3"></a-sphere>
+      <a-sphere class="js--sphere-3 js--interact" value="hoog-hoog" sound="src: #buku; volume: 2; loop: false; on: mouseenter;" color="lightpink" radius="0.2" position="0 -1.1 -4.3"></a-sphere>
+      <a-sphere class="js--sphere-3 js--interact" value="laag-hoog-laag" sound="src: #kiyele; volume: 2; loop: false; on: mouseenter;" color="lightpink" radius="0.2" position="-2 -1.1 -4.3"></a-sphere>
 
 
-      <a-plane value="hoog-laag" class="js--keuze-3 js--interact" color="lightgrey" position="0 0 -2.8"  width="1.1" height="0.3">
+      <a-plane value="hoog-laag" class="js--keuze-3 js--interact" color="white" position="0 0 -4.3"  width="1.1" height="0.3">
      <a-text value="hoog-laag" align="center" color="black" width="4"></a-text>
      </a-plane>
-      <a-plane value="hoog-hoog" class="js--keuze-3 js--interact" color="lightgrey" position="-2 0 -2.8" width="1.1" height="0.3">
+      <a-plane value="hoog-hoog" class="js--keuze-3 js--interact" color="white" position="-2 0 -4.3" width="1.1" height="0.3">
       <a-text value="hoog-hoog" align="center" color="black" width="4"></a-text>
       </a-plane>
-      <a-plane  value="laag-hoog-laag" class="js--keuze-3 js--interact" color="lightgrey" position="2 0 -2.8"  width="1.1" height="0.3">
+      <a-plane  value="laag-hoog-laag" class="js--keuze-3 js--interact" color="white" position="2 0 -4.3"  width="1.3" height="0.3">
         <a-text value="laag-hoog-laag" align="center" color="black" width="4"></a-text>
       </a-plane>
     </a-box>
