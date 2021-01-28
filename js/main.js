@@ -25,6 +25,15 @@ window.onload = () => {
   var triagle3 = document.getElementsByClassName('js--triangle-3');
   var triagle4 = document.getElementsByClassName('js--triangle-4');
   var triagle5 = document.getElementsByClassName('js--triangle-5');
+  const teleportRaadsel = document.getElementsByClassName('js--teleportRaadsel')
+  let teleport1 = document.getElementsByClassName('js--teleportPuzzel1')
+  let teleport2 = document.getElementsByClassName('js--teleportPuzzel2')
+  let teleport3 = document.getElementsByClassName('js--teleportPuzzel3')
+  let teleport4 = document.getElementsByClassName('js--teleportPuzzel4')
+  let teleport5 = document.getElementsByClassName('js--teleportPuzzel5')
+  let correct2 = document.getElementsByClassName('js--correct-2')
+
+  const camera = document.getElementById('js--camera');
 
   for(let i = 0; i < ni.length; i++){
     ni[i].onmouseenter = (event) => {
@@ -187,9 +196,21 @@ window.onload = () => {
       controle_text[i].setAttribute("color", "green");
       console.log("goede antwoord");
       for(let j = 0; j < triagle2.length; j++){
-        if(schriftKleur1 == "green" && schriftKleur2 == "green" && schriftKleur3 == "green" && schriftKleur4 == "green" && schriftKleur5 == "green"){
+        if(geel_antwoord == "Ni" && blauw_antwoord == "na" && paars_antwoord == "ku" && groen_antwoord == "Penda"){
           triagle2[j].getAttribute("color");
           triagle2[j].setAttribute("color", "green");
+        }
+      }
+      for(let j = 0; j < correct2.length; j++){
+        if(geel_antwoord == "Ni" && blauw_antwoord == "na" && paars_antwoord == "ku" && groen_antwoord == "Penda"){
+          correct2[j].getAttribute("value");
+          correct2[j].setAttribute("value", "Gefeliciteerd! je hebt de puzzel opgelost en hiervoor krijg je de volgende letter: H");
+        }
+      }
+      for(let j = 0; j < teleport2.length; j++){
+        if(geel_antwoord == "Ni" && blauw_antwoord == "na" && paars_antwoord == "ku" && groen_antwoord == "Penda"){
+          teleport2[j].getAttribute("color");
+          teleport2[j].setAttribute("color", "green");
         }
       }
     }else{
@@ -254,6 +275,13 @@ window.onload = () => {
         }
       }
 
+      for(let j = 0; j < teleport1.length; j++){
+        if(schriftKleur1 == "green" && schriftKleur2 == "green" && schriftKleur3 == "green" && schriftKleur4 == "green" && schriftKleur5 == "green"){
+          teleport1[j].getAttribute("color");
+          teleport1[j].setAttribute("color", "green");
+        }
+      }
+
     }
   }
 
@@ -309,6 +337,12 @@ window.onload = () => {
           triagle3[j].setAttribute("color", "green");
         }
       }
+      for(let j = 0; j < teleport3.length; j++){
+        if(gemaakteKeuze1 == "lightgreen" && gemaakteKeuze2 == "lightgreen" && gemaakteKeuze3 == "lightgreen"){
+          teleport3[j].getAttribute("color");
+          teleport3[j].setAttribute("color", "green");
+        }
+      }
     }
   }
 
@@ -343,6 +377,12 @@ window.onload = () => {
             triagle4[j].setAttribute("color", "green");
           }
         }
+        for(let j = 0; j < teleport4.length; j++){
+          if(keuzeKleur_4 == "green"){
+            teleport4[j].getAttribute("color");
+            teleport4[j].setAttribute("color", "green");
+          }
+        }
         for(let j = 0; j < moetWeg.length; j++){
           if(keuzeKleur_4 == "green"){
             moetWeg[j].getAttribute("value");
@@ -353,15 +393,45 @@ window.onload = () => {
       }
   }
 
-  console.log("Script laad in");
-  const teleportRaadsel = document.getElementsByClassName('js--teleportRaadsel')
-  const teleport1 = document.getElementsByClassName('js--teleportPuzzel1')
-  const teleport2 = document.getElementsByClassName('js--teleportPuzzel2')
-  const teleport3 = document.getElementsByClassName('js--teleportPuzzel3')
-  const teleport4 = document.getElementsByClassName('js--teleportPuzzel4')
-  const teleport5 = document.getElementsByClassName('js--teleportPuzzel5')
+  var keuze_5 = document.getElementsByClassName('js--keuze-5');
+  var correct_5 = document.getElementsByClassName('js--correct-5');
 
-  const camera = document.getElementById('js--camera');
+  for(let j = 0; j < keuze_5.length; j++){
+    keuze_5[j].onmouseenter = (event) => {
+      gemaakteKeuze_5 = keuze_5[j].getAttribute("value");
+      keuzeKleur_5 = keuze_5[j].getAttribute("color");
+      if(keuzeKleur_5 == "red" || keuzeKleur_5 == "green"){
+        keuze_5[j].setAttribute("color","lightgrey");
+        keuzeKleur_5 = keuze_5[j].getAttribute("color");
+      }
+        if(gemaakteKeuze_5 == "onjuist"){
+          keuze_5[j].setAttribute("color","lightgrey");
+        }else{
+          keuze_5[j].setAttribute("color","green");
+        }
+        keuzeKleur_5 = keuze_5[j].getAttribute("color");
+        for(let j = 0; j < correct_5.length; j++){
+          if(keuzeKleur_5 == "green"){
+            correct_5[j].getAttribute("value");
+            correct_5[j].setAttribute("value", "Gefeliciteerd! je hebt de puzzel opgelost en hiervoor krijg je de volgende letter: N");
+          }
+        }
+        for(let j = 0; j < triagle5.length; j++){
+          if(keuzeKleur_5 == "green"){
+            triagle5[j].getAttribute("color");
+            triagle5[j].setAttribute("color", "green");
+          }
+        }
+        for(let j = 0; j < teleport5.length; j++){
+          if(keuzeKleur_5 == "green"){
+            teleport5[j].getAttribute("color");
+            teleport5[j].setAttribute("color", "green");
+          }
+        }
+
+
+      }
+  }
 
   for (var i =0; i < teleportRaadsel.length; i++){
     teleportRaadsel[i].addEventListener('click', function(evt){

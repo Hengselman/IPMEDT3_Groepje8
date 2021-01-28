@@ -15,6 +15,10 @@
         <a-asset-item id="notitieblaadje-obj" src="3dmodels/Notitieblaadje.obj"></a-asset-item>
         <a-asset-item id="notitieblaadje-mtl" src="3dmodels/Notitieblaadje.mtl"></a-asset-item>
         <img src="3dmodels/metal_thrash.png"></img>
+        <a-asset-item id="koffie-obj" src="3dmodels/koffie.obj"></a-asset-item>
+        <a-asset-item id="koffie-mtl" src="3dmodels/koffie.mtl"></a-asset-item>
+        <img src="3dmodels/koffie.png"></img>
+        <img src="3dmodels/wit.png"></img>
         <img id="js--Berber-img" src="img/Berber.png"></img>
         <img id="js--arabisch-img" src="img/arabisch.PNG"></img>
         <img id="js--ge'ez-img" src="img/ge'ez.png"></img>
@@ -32,6 +36,10 @@
         <img id="woodroof" src="img/woodroof.jpg"></img>
         <img id="woodpole" src="img/woodpole.jpg"></img>
         <img id="bricks" src="img/brickwall.jpg"></img>
+        <img id="afrika_talen" src="img/puzzel_1_img1.png"></img>
+        <img id="afrika_map" src="img/puzzel_1_africa.png"></img>
+        <img id="congo" src="img/congo.jpg"></img>
+        <img id="yoruba" src="img/yoruba.jpg"></img>
       </a-assets>
       <a-camera id="js--camera">
         <a-entity
@@ -189,6 +197,8 @@
       <!-- prullenbak -->
     <a-obj-model src="#thrash_can-obj" mtl="#thrash_can-mtl" position="1.5 0 -3.8" rotation="0 180 0" scale="0.2 0.2 0.2"></a-obj-model>
 
+    <!-- koffiemok -->
+    <a-obj-model src="#koffie-obj" mtl="#koffie-mtl" position="0.7 1.1 -3.9" rotation="0 180 0" scale="0.1 0.1 0.1"></a-obj-model>
     <!-- Puzzelkamer 1 -->
     <a-box material="src: #bricks; repeat: 3 2" width="0.2" depth="9" height="4" position="-12 1.6 -4.5" rotation="0 -90 0">
       <a-box material="src: #wood" width="9" depth="9" height="0.2" position="4.5 -1.7 0"></a-box>
@@ -265,7 +275,8 @@
         <a-plane color="lightgrey" position="-3.9 0 2" rotation="0 90 0"  width="3.2" height="1.5">
          <a-text align="center"class="js--a" value="Hoe veel schriften zijn er op de wereld? In Europa is er bijvoorbeeld het Latijnse alfabet, geschikt voor allerlei verschillende talen. Maar in Afrika gaat het net even anders: sommige Afrikaanse talen hebben hun eigen schrift, dat je voor geen enkele andere taal kunt gebruiken. Kijk maar naar de volgende vijf talen. Maar welk schrift hoort bij welke taal?" color="black" width="3"></a-text>
         </a-plane>
-
+        <a-image src="#afrika_talen"  color="lightgrey" rotation="0 270 0" position="4.7 0 0" height="1.5" width="3"></a-image>
+        <a-image src="#afrika_map" color="lightgrey" rotation="0 270 0" position="4.7 0 3.5" height="2.5" width="2"></a-image>
         <a-plane color="lightgrey" position="0.4 1.7 -2.8"  width="3.2" height="0.5">
          <a-text align="center" value="Match de taal met het bijbehorende schrift." color="black" width="3"></a-text>
        </a-plane>
@@ -367,45 +378,48 @@
       <a-text value="2" position="0 3 0.2" rotation="0 90 0" align="center" color="black" scale="7 7 7"></a-text>
     </a-box>
     <a-box position="-24 1.6 0" color="black" width="0.001" height="0.001" depth="0.001">
-      <a-plane class="ni js--interact" position="0 3 -5" color="yellow" value="Ni" material="side: double"><a-text value="Ni" align="center" color="black"></a-text></a-plane>
-      <a-plane class="me js--interact" position="1 3 -5" color="blue" value="me" material="side: double"><a-text value="me" align="center" color="black"></a-text></a-plane>
-      <a-plane class="lala js--interact" position="2 3 -5" color="green" value="lala" material="side: double"><a-text value="lala" align="center" color="black"></a-text></a-plane>
-      <a-text position=" 1 2 -5" value="directe vertaling: ik-voltooid-slapen" align="center" color="black"></a-text>
-      <a-text position=" 1 1.5 -5" value="vertaling: Ik heb geslapen" align="center" color="black"></a-text>
+      <a-plane color="lightgrey" position="4 1 0" rotation="0 270 0"  width="3.2" height="0.5">
+       <a-text align="center" class="js--correct-2" value="" color="black" width="3"></a-text>
+      </a-plane>
+      <a-plane class="ni js--interact" position="-3.8 1.2 -4.2" color="yellow" value="Ni" material="side: double"><a-text width="4" value="Ni" align="center" color="black"></a-text></a-plane>
+      <a-plane class="me js--interact" position="-2.8 1.2 -4.2" color="blue" value="me" material="side: double"><a-text width="4" value="me" align="center" color="black"></a-text></a-plane>
+      <a-plane class="lala js--interact" position="-1.8 1.2 -4.2" color="green" value="lala" material="side: double"><a-text width="4" value="lala" align="center" color="black"></a-text></a-plane>
+      <a-text position="-2.5 0.5 -4.2" value="directe vertaling: ik-voltooid-slapen" width="4" align="center" color="black"></a-text>
+      <a-text position="-3 0.2 -4.2" value="vertaling: Ik heb geslapen" width="4" align="center" color="black"></a-text>
 
-      <a-plane class="a js--interact" position="4 3 -5" color="yellow" value="A" material="side: double"><a-text value="A" align="center" color="black"></a-text></a-plane>
-      <a-plane class="li js--interact" position="5 3 -5" color="blue" value="li" material="side: double"><a-text value="li" align="center" color="black"></a-text></a-plane>
-      <a-plane class="ku js--interact" position="6 3 -5" color="purple" value="ku" material="side: double"><a-text value="ku" align="center" color="black"></a-text></a-plane>
-      <a-plane class="ona js--interact" position="7 3 -5" color="green" value="ona" material="side: double"><a-text value="ona" align="center" color="black"></a-text></a-plane>
-      <a-text position=" 5.5 2 -5" value="directe vertaling: hij/zij-toen-jou-zien" align="center" color="black"></a-text>
-      <a-text position=" 5.5 1.5 -5" value="vertaling: Hij/zij zag jou" align="center" color="black"></a-text>
+      <a-plane class="a js--interact" position="0 1.2 -4.2" color="yellow" value="A" material="side: double"><a-text width="4" value="A" align="center" color="black"></a-text></a-plane>
+      <a-plane class="li js--interact" position="1 1.2 -4.2" color="blue" value="li" material="side: double"><a-text width="4" value="li" align="center" color="black"></a-text></a-plane>
+      <a-plane class="ku js--interact" position="2 1.2 -4.2" color="purple" value="ku" material="side: double"><a-text width="4" value="ku" align="center" color="black"></a-text></a-plane>
+      <a-plane class="ona js--interact" position="3 1.2 -4.2" color="green" value="ona" material="side: double"><a-text width="4" value="ona" align="center" color="black"></a-text></a-plane>
+      <a-text position="2 0.5 -4.2" value="directe vertaling: hij/zij-toen-jou-zien" align="center" color="black" width="4"></a-text>
+      <a-text position="2 0.2 -4.2" value="vertaling: Hij/zij zag jou" align="center" color="black" width="4"></a-text>
 
-      <a-plane class="a js--interact" position="9 3 -5" color="yellow" value="A" material="side: double"><a-text value="A" align="center" color="black"></a-text></a-plane>
-      <a-plane class="li js--interact" position="10 3 -5" color="blue" value="li" material="side: double"><a-text value="li" align="center" color="black"></a-text></a-plane>
-      <a-plane class="tu_p js--interact" position="11 3 -5" color="purple" value="tu" material="side: double"><a-text value="tu" align="center" color="black"></a-text></a-plane>
-      <a-plane class="sikia js--interact" position="12 3 -5" color="green" value="sikia" material="side: double"><a-text value="sikia" align="center" color="black"></a-text></a-plane>
-      <a-text position=" 10.5 2 -5" value="directe vertaling: hij/zij-toen-ons-horen" align="center" color="black"></a-text>
-      <a-text position=" 10.5 1.5 -5" value="vertaling: Hij/zij hoorde ons" align="center" color="black"></a-text>
+      <a-plane class="a js--interact" position="-2 -0.5 -4.2" color="yellow" value="A" material="side: double"><a-text width="4" value="A" align="center" color="black"></a-text></a-plane>
+      <a-plane class="li js--interact" position="-1 -0.5 -4.2" color="blue" value="li" material="side: double"><a-text width="4" value="li" align="center" color="black"></a-text></a-plane>
+      <a-plane class="tu_p js--interact" position="0 -0.5 -4.2" color="purple" value="tu" material="side: double"><a-text width="4" value="tu" align="center" color="black"></a-text></a-plane>
+      <a-plane class="sikia js--interact" position="1 -0.5 -4.2" color="green" value="sikia" material="side: double"><a-text width="4" value="sikia" align="center" color="black"></a-text></a-plane>
+      <a-text position=" -0.5 -1.2 -4.2" value="directe vertaling: hij/zij-toen-ons-horen" align="center" color="black" width="4"></a-text>
+      <a-text position=" -0.5 -1.5 -4.2" value="vertaling: Hij/zij hoorde ons" align="center" color="black" width="4"></a-text>
 
-      <a-plane class="tu_g js--interact" position="2 3 5" rotation="0 180 0" color="yellow" value="Tu" material="side: double"><a-text value="Tu" align="center" color="black"></a-text></a-plane>
-      <a-plane class="na js--interact" position="1 3 5" rotation="0 180 0" color="blue" value="na" material="side: double"><a-text value="na" align="center" color="black"></a-text></a-plane>
-      <a-plane class="soma js--interact" position="0 3 5" rotation="0 180 0" color="green" value="soma" material="side: double"><a-text value="soma" align="center" color="black"></a-text></a-plane>
-      <a-text position=" 1 2 5" rotation="0 180 0" value="directe vertaling: wij-nu-lezen" align="center" color="black"></a-text>
-      <a-text position=" 1 1.5 5" rotation="0 180 0" value="vertaling: Wij lezen" align="center" color="black"></a-text>
+      <a-plane class="tu_g js--interact" position="-4.2 1.2 3.8" rotation="0 90 0" color="yellow" value="Tu" material="side: double"><a-text width="4" value="Tu" align="center" color="black"></a-text></a-plane>
+      <a-plane class="na js--interact" position="-4.2 1.2 2.8" rotation="0 90 0" color="blue" value="na" material="side: double"><a-text width="4" value="na" align="center" color="black"></a-text></a-plane>
+      <a-plane class="soma js--interact" position="-4.2 1.2 1.8" rotation="0 90 0" color="green" value="soma" material="side: double"><a-text width="4" value="soma" align="center" color="black"></a-text></a-plane>
+      <a-text position=" -4.2 0.5 2.8" rotation="0 90 0" value="directe vertaling: wij-nu-lezen" align="center" color="black" width="4"></a-text>
+      <a-text position=" -4.2 0.2 2.8" rotation="0 90 0" value="vertaling: Wij lezen" align="center" color="black" width="4"></a-text>
 
-      <a-plane class="wa js--interact" position="6 3 5" rotation="0 180 0" color="yellow" value="Wa" material="side: double"><a-text value="Wa" align="center" color="black"></a-text></a-plane>
-      <a-plane class="ta js--interact" position="5 3 5" rotation="0 180 0" color="blue" value="Ta" material="side: double"><a-text value="Ta" align="center" color="black"></a-text></a-plane>
-      <a-plane class="penda js--interact" position="4 3 5" rotation="0 180 0" color="green" value="Penda" material="side: double"><a-text value="Penda" align="center" color="black"></a-text></a-plane>
-      <a-text position=" 5 2 5" rotation="0 180 0" value="directe vertaling: zij-toekomstig-houden-van" align="center" color="black"></a-text>
-      <a-text position=" 5 1.5 5" rotation="0 180 0" value="vertaling: Zij zullen van de ... houden" align="center" color="black"></a-text>
+      <a-plane class="wa js--interact" position="-4.2 1.2 -1" rotation="0 90 0" color="yellow" value="Wa" material="side: double"><a-text width="4" value="Wa" align="center" color="black"></a-text></a-plane>
+      <a-plane class="ta js--interact" position="-4.2 1.2 -2" rotation="0 90 0" color="blue" value="Ta" material="side: double"><a-text width="4" value="Ta" align="center" color="black"></a-text></a-plane>
+      <a-plane class="penda js--interact" position="-4.2 1.2 -3" rotation="0 90 0" color="green" value="Penda" material="side: double"><a-text width="4" value="Penda" align="center" color="black"></a-text></a-plane>
+      <a-text position="-4.2 0.5 -2" rotation="0 90 0" value="directe vertaling: zij-toekomstig-houden-van" align="center" color="black" width="4"></a-text>
+      <a-text position="-4.2 0.2 -2" rotation="0 90 0" value="vertaling: Zij zullen van de ... houden" align="center" color="black" width="4"></a-text>
 
-      <a-plane class="js--interact" position="-5 3 1" rotation="0 90 0" color="yellow" value="" material="side: double"><a-text class="geel_value" value="" align="center" color="black"></a-text></a-plane>
-      <a-plane class="js--interact" position="-5 3 0" rotation="0 90 0" color="blue" value="" material="side: double"><a-text class="blauw_value" value="" align="center" color="black"></a-text></a-plane>
-      <a-plane class="js--interact" position="-5 3 -1" rotation="0 90 0" color="purple" value="" material="side: double"><a-text class="paars_value" value="" align="center" color="black"></a-text></a-plane>
-      <a-plane class="js--interact" position="-5 3 -2" rotation="0 90 0" color="green" text value="" material="side: double"><a-text class="groen_value" value="" align="center" color="black"></a-text></a-plane>
-      <a-text position=" -5 2 -0.5" rotation="0 90 0" value="Hoe zeg je in het Swahili:" align="center" color="black"></a-text>
-      <a-text position=" -5 1.5 -0.5" rotation="0 90 0" value="ik houd van jou?" align="center" color="black"></a-text>
-      <a-text class="controle_text" position=" -5 4 -0.5" rotation="0 90 0" value="" align="center" color="" width="8"></a-text>
+      <a-plane class="js--interact" position="4.2 0 -1.5" rotation="0 270 0" color="yellow" value="" material="side: double"><a-text width="4" class="geel_value" value="" align="center" color="black"></a-text></a-plane>
+      <a-plane class="js--interact" position="4.2 0 -0.5" rotation="0 270 0" color="blue" value="" material="side: double"><a-text width="4" class="blauw_value" value="" align="center" color="black"></a-text></a-plane>
+      <a-plane class="js--interact" position="4.2 0 0.5" rotation="0 270 0" color="purple" value="" material="side: double"><a-text width="4" class="paars_value" value="" align="center" color="black"></a-text></a-plane>
+      <a-plane class="js--interact" position="4.2 0 1.5" rotation="0 270 0" color="green" text value="" material="side: double"><a-text width="4" class="groen_value" value="" align="center" color="black"></a-text></a-plane>
+      <a-text position="4.2 -0.7 -0.3" rotation="0 270 0" value="Hoe zeg je in het Swahili:" align="center" color="black" width="4"></a-text>
+      <a-text position="4.2 -1 -0.3" rotation="0 270 0" value="ik houd van jou?" align="center" color="black" width="4"></a-text>
+      <a-text class="controle_text" position="4.2 1.2 -0.3" rotation="0 270 0" value="" align="center" color="" width="5"></a-text>
     </a-box>
 
     <!-- Puzzelkamer 3 -->
@@ -488,6 +502,7 @@
       <a-text align="center" value="Het is de bedoeling dat je eerst op een bol klikt om het geluid af te spelen en daarna klik je op de toon die erbij hoort." color="black" width="3"></a-text>
     </a-plane>
 
+    <a-image src="#congo" color="lightgrey" rotation="0 270 0" position="4.3 0.2 0" height="3" width="3"></a-image>
 
       <a-sphere class="js--sphere-3 js--interact" value="hoog-laag" sound="src: #mali; volume: 2; loop: false; on: mouseenter;" color="lightpink" radius="0.2" position="2 -1.1 -4.3"></a-sphere>
       <a-sphere class="js--sphere-3 js--interact" value="hoog-hoog" sound="src: #buku; volume: 2; loop: false; on: mouseenter;" color="lightpink" radius="0.2" position="0 -1.1 -4.3"></a-sphere>
@@ -583,6 +598,8 @@
       <a-text align="center" class="js--correct-weg" value="‘Wel alle naamwoordklassen nog aan toe! Ik moet ook geen koffie drinken als ik met belangrijke gegevens bezig ben. Deze aantekeningen waren voor het college dat ik straks moet geven, waarin ik iets wilde uitleggen over getallen in het Yoruba. Nu ben ik mijn voorbeeld kwijt! Kunt u me helpen, vreemdeling? Hoe zeg je ‘zeventien’ in het Yoruba?’" color="black" width="3"></a-text>
     </a-plane>
 
+    <a-image src="#yoruba" color="lightgrey" rotation="0 90 0" position="-4.3 0.2 0" height="2" width="3"></a-image>
+
     <a-plane color="lightgrey" position="-1.5 0.7 -4.3"  width="3" height="0.5">
      <a-text align="center" value="Gebruik deze afbeelding om tot je
      antwoord te komen" color="black" width="3"></a-text>
@@ -672,7 +689,7 @@
       <a-text value="5" position="0 3 0.2" rotation="0 90 0" align="center" color="black" scale="7 7 7"></a-text>
     </a-box>
     <a-box position="-24 1.6 -12" color="black" width="0.001" height="0.001" depth="0.001">
-      <a-text position=" -4.2 0 0.2" width="4" rotation="0 90 0" value="In het Nederlands kun je niet zeggen “de kanarie de kat ving.” Dat is raar. We moeten nou eenmaal de woordvolgorde “de kanarie ving de kat” aanhouden. Dat komt doordat in het Nederlands het onderwerp ‘de kanarie’ vóór het werkwoord ‘ving’ hoort, en ‘de kat’ áchter het werkwoord komt. In veel Afrikaanse talen wordt de woordvolgorde echter door iets heel anders bepaald! De positie van een woord hangt af van de informatie die het woord je geeft. Maak je klaar voor wat echte taalwetenschapperstermen: " align="center" color="black"></a-text>
+      <a-text class="js--correct-5" position=" -4.2 0 0.2" width="4" rotation="0 90 0" value="In het Nederlands kun je niet zeggen “de kanarie de kat ving.” Dat is raar. We moeten nou eenmaal de woordvolgorde “de kanarie ving de kat” aanhouden. Dat komt doordat in het Nederlands het onderwerp ‘de kanarie’ vóór het werkwoord ‘ving’ hoort, en ‘de kat’ áchter het werkwoord komt. In veel Afrikaanse talen wordt de woordvolgorde echter door iets heel anders bepaald! De positie van een woord hangt af van de informatie die het woord je geeft. Maak je klaar voor wat echte taalwetenschapperstermen: " align="center" color="black"></a-text>
 
       <a-text position=" -2 1 -4.3" width ="4" value="1)	Topic: het topic is vaak de informatie die eerder in het verhaal al is genoemd." align="center" color="black"></a-text>
 
@@ -711,16 +728,16 @@
       "align="center" color="black"></a-text>
 
       <a-text value="Kies hier het juiste antwoord: " position="0.8 2 4.2" rotation="0 180 0" color="black" height="2" width="8"></a-text>
-      <a-plane value="onjuist" class="js--keuze js--interact" rotation="0 180 0" color="lightgrey" position="-0.5 1 4.2"  width="2">
+      <a-plane value="onjuist" class="js--keuze-5 js--interact" rotation="0 180 0" color="lightgrey" position="-0.5 1 4.2"  width="2">
       <a-text value="agens" align="center" color="black" width="8"></a-text>
       </a-plane>
-      <a-plane value="juist" rotation="0 180 0" class="js--keuze js--interact" color="lightgrey" position="-0.5 -0.5 4.2" width="2">
+      <a-plane value="juist" rotation="0 180 0" class="js--keuze-5 js--interact" color="lightgrey" position="-0.5 -0.5 4.2" width="2">
       <a-text value="Topic" align="center" color="black" width="8"></a-text>
       </a-plane>
-      <a-plane  value="onjuist" rotation="0 180 0" class="js--keuze js--interact" color="lightgrey" position="-3 -0.5 4.2"  width="2">
+      <a-plane  value="onjuist" rotation="0 180 0" class="js--keuze-5 js--interact" color="lightgrey" position="-3 -0.5 4.2"  width="2">
       <a-text value="patiens" align="center" color="black" width="8"></a-text>
       </a-plane>
-      <a-plane  value="onjuist"  rotation="0 180 0" class="js--keuze js--interact" color="lightgrey" position="-3 1 4.2"  width="2">
+      <a-plane  value="onjuist"  rotation="0 180 0" class="js--keuze-5 js--interact" color="lightgrey" position="-3 1 4.2"  width="2">
       <a-text value="focus" align="center" color="black" width="8"></a-text>
       </a-plane>
     </a-box>
