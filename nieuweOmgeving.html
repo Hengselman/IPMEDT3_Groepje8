@@ -12,6 +12,8 @@
         <a-asset-item id="deur_prototype-mtl" src="3dmodels/deur_prototype.mtl"></a-asset-item>
         <a-asset-item id="thrash_can-obj" src="3dmodels/thrash_can.obj"></a-asset-item>
         <a-asset-item id="thrash_can-mtl" src="3dmodels/thrash_can.mtl"></a-asset-item>
+        <a-asset-item id="notitieblaadje-obj" src="3dmodels/Notitieblaadje.obj"></a-asset-item>
+        <a-asset-item id="notitieblaadje-mtl" src="3dmodels/Notitieblaadje.mtl"></a-asset-item>
         <img src="3dmodels/metal_thrash.png"></img>
         <a-asset-item id="koffie-obj" src="3dmodels/koffie.obj"></a-asset-item>
         <a-asset-item id="koffie-mtl" src="3dmodels/koffie.mtl"></a-asset-item>
@@ -40,6 +42,8 @@
         <img id="bricks" src="img/brickwall.jpg"></img>
         <img id="afrika_talen" src="img/puzzel_1_img1.png"></img>
         <img id="afrika_map" src="img/puzzel_1_africa.png"></img>
+        <img id="congo" src="img/congo.jpg"></img>
+        <img id="yoruba" src="img/yoruba.jpg"></img>
       </a-assets>
       <a-camera id="js--camera">
         <a-entity
@@ -56,7 +60,11 @@
           position = "0 0 -0.5"
           raycaster = "objects: .js--interact"
         ></a-entity>
+        <a-obj-model src="#notitieblaadje-obj" mtl="#notitieblaadje-mtl" position="1 -1 -1" rotation="0 -90 5" scale="0.5 0.5 0.5"></a-obj-model>
       </a-camera>
+
+      <!-- Aan de camera vast -->
+
 
       <!-- Raadselkamer -->
       <a-box material="src: #bricks; repeat: 3 2" width="0.2" depth="9" height="4" position="0 1.6 -4.5" rotation="0 -90 0">
@@ -66,8 +74,11 @@
         <a-triangle class="js--triangle" color="red" vertex-a="2.5 4.4 0" vertex-b="-2 0 0" vertex-c="7.5 -0.5 0" position="0 2 2.5" rotation="0 90 0"></a-triangle>
 
         <!-- Voorkant -->
-        <a-box material="src: #bricks; repeat: 3 2" width="0.2" depth="9" height="4" position="9 0 0"></a-box>
+        <a-box material="src: #bricks; repeat: 2 2" width="0.2" depth="6" height="4" position="9 0 -1.5"></a-box>
         <a-triangle class="js--triangle" color="red" vertex-a="2.5 4.4 0" vertex-b="-2 0 0" vertex-c="7.5 -0.5 0" position="9 2 -2.5" rotation="0 270 0"></a-triangle>
+        <a-box material="src: #bricks; repeat: 0.5 2" width="0.2" depth="1.5" height="4" position="9 0 3.75"></a-box>
+        <a-box material="src: #bricks; repeat: 0.5 0.5" width="0.2" depth="1.5" height="1" position="9 1.5 2.25"></a-box>
+        <a-box class="js--raadselDeur" color="brown" material="src: #bricks; repeat: 0.5 1.5" width="0.2" depth="1.5" height="3" position="9 -0.5 2.25"></a-box>
 
         <!-- Het dak -->
         <a-box material="src: #woodroof; repeat: 3" width="9" depth="0.2" height="7" position="4.5 4 2.5" rotation="-45 0 0"></a-box>
@@ -125,6 +136,20 @@
           <a-text value="Puzzel 5" position="0.5 -0.7 0" color="black" scale="0.6 0.6 0.6"></a-text>
         </a-plane>
 
+        <!-- Verzamelde letters -->
+        <a-plane color="black" width="5" height="0.1" position="8.88 1 -1.5" rotation="0 -90 0">
+          <a-plane color="white" width="5" height="1" position="0 -0.5 -0.01" rotation="0 0 0"></a-plane>
+          <a-plane color="black" width="5" height="0.1" position="0 -1 0" rotation="0 0 0"></a-plane>
+
+          <a-plane color="black" width="0.1" height="1" position="-2.5 -0.5 0" rotation="0 0 0"></a-plane>
+          <a-plane color="black" width="0.1" height="1" position="-1.5 -0.5 0" rotation="0 0 0"></a-plane>
+          <a-plane color="black" width="0.1" height="1" position="-0.5 -0.5 0" rotation="0 0 0"></a-plane>
+          <a-plane color="black" width="0.1" height="1" position="0.5 -0.5 0" rotation="0 0 0"></a-plane>
+          <a-plane color="black" width="0.1" height="1" position="1.5 -0.5 0" rotation="0 0 0"></a-plane>
+          <a-plane color="black" width="0.1" height="1" position="2.5 -0.5 0" rotation="0 0 0"></a-plane>
+
+        </a-plane>
+
         <!-- Bureau -->
         <a-box color="#654321" width="1" height="0.2" depth="2" position="0.6 -0.6 0">
           <a-box color="brown" width="0.2" height="1" depth="0.2" position="0.35 -0.6 0.85"></a-box>
@@ -151,8 +176,8 @@
           <a-box color="#3f2a14" width="1.9" height="0.1" depth="0.5" position="0 1 0" rotation="0 0 0"></a-box>
           <a-box color="#3f2a14" width="1.9" height="0.1" depth="0.5" position="0 2 0" rotation="0 0 0"></a-box>
           <a-box color="#3f2a14" width="1.9" height="0.1" depth="0.5" position="0 3 0" rotation="0 0 0"></a-box>
-          <a-box color="#654321" width="0.1" height="3" depth="0.5" position="-1 1.5 0" rotation="0 0 0"></a-box>
-          <a-box color="#654321" width="0.1" height="3" depth="0.5" position="1 1.5 0" rotation="0 0 0"></a-box>
+          <a-box color="#654321" width="0.1" height="3.1" depth="0.5" position="-1 1.5 0" rotation="0 0 0"></a-box>
+          <a-box color="#654321" width="0.1" height="3.1" depth="0.5" position="1 1.5 0" rotation="0 0 0"></a-box>
 
             <!-- Boeken -->
           <a-box color="white" width="0.07" depth="0.25" height="0.3" position="-0.60 1.2 -0.05">
@@ -258,8 +283,8 @@
         <a-plane color="lightgrey" position="-3.9 0 2" rotation="0 90 0"  width="3.2" height="1.5">
          <a-text align="center"class="js--a" value="Hoe veel schriften zijn er op de wereld? In Europa is er bijvoorbeeld het Latijnse alfabet, geschikt voor allerlei verschillende talen. Maar in Afrika gaat het net even anders: sommige Afrikaanse talen hebben hun eigen schrift, dat je voor geen enkele andere taal kunt gebruiken. Kijk maar naar de volgende vijf talen. Maar welk schrift hoort bij welke taal?" color="black" width="3"></a-text>
         </a-plane>
-        <a-image src="#afrika_talen"  color="lightgrey" rotation="0 270 0" position="4.7 0 -0.5" height="1.5" width="3"></a-image>
-        <a-image src="#afrika_map" color="lightgrey" rotation="0 270 0" position="4.7 0 3" height="2.5" width="2"></a-image>
+        <a-image src="#afrika_talen"  color="lightgrey" rotation="0 270 0" position="4.7 0 0" height="1.5" width="3"></a-image>
+        <a-image src="#afrika_map" color="lightgrey" rotation="0 270 0" position="4.7 0 3.5" height="2.5" width="2"></a-image>
         <a-plane color="lightgrey" position="0.4 1.7 -2.8"  width="3.2" height="0.5">
          <a-text align="center" value="Match de taal met het bijbehorende schrift." color="black" width="3"></a-text>
        </a-plane>
@@ -485,6 +510,7 @@
       <a-text align="center" value="Het is de bedoeling dat je eerst op een bol klikt om het geluid af te spelen en daarna klik je op de toon die erbij hoort." color="black" width="3"></a-text>
     </a-plane>
 
+    <a-image src="#congo" color="lightgrey" rotation="0 270 0" position="4.3 0.2 0" height="3" width="3"></a-image>
 
       <a-sphere class="js--sphere-3 js--interact" value="hoog-laag" sound="src: #mali; volume: 2; loop: false; on: mouseenter;" color="lightpink" radius="0.2" position="2 -1.1 -4.3"></a-sphere>
       <a-sphere class="js--sphere-3 js--interact" value="hoog-hoog" sound="src: #buku; volume: 2; loop: false; on: mouseenter;" color="lightpink" radius="0.2" position="0 -1.1 -4.3"></a-sphere>
@@ -579,6 +605,8 @@
      <a-plane color="lightgrey" rotation="0 270 0" position="4.3 -0.5 0"  width="3.2" height="1.1">
       <a-text align="center" class="js--correct-weg" value="‘Wel alle naamwoordklassen nog aan toe! Ik moet ook geen koffie drinken als ik met belangrijke gegevens bezig ben. Deze aantekeningen waren voor het college dat ik straks moet geven, waarin ik iets wilde uitleggen over getallen in het Yoruba. Nu ben ik mijn voorbeeld kwijt! Kunt u me helpen, vreemdeling? Hoe zeg je ‘zeventien’ in het Yoruba?’" color="black" width="3"></a-text>
     </a-plane>
+
+    <a-image src="#yoruba" color="lightgrey" rotation="0 90 0" position="-4.3 0.2 0" height="2" width="3"></a-image>
 
     <a-plane color="lightgrey" position="-1.5 0.7 -4.3"  width="3" height="0.5">
      <a-text align="center" value="Gebruik deze afbeelding om tot je
