@@ -195,13 +195,13 @@ window.onload = () => {
       controle_text[i].setAttribute("color", "green");
       console.log("goede antwoord");
       for(let j = 0; j < triagle2.length; j++){
-        if(schriftKleur1 == "green" && schriftKleur2 == "green" && schriftKleur3 == "green" && schriftKleur4 == "green" && schriftKleur5 == "green"){
+        if(geel_antwoord == "Ni" && blauw_antwoord == "na" && paars_antwoord == "ku" && groen_antwoord == "Penda"){
           triagle2[j].getAttribute("color");
           triagle2[j].setAttribute("color", "green");
         }
       }
       for(let j = 0; j < teleport2.length; j++){
-        if(schriftKleur1 == "green" && schriftKleur2 == "green" && schriftKleur3 == "green" && schriftKleur4 == "green" && schriftKleur5 == "green"){
+        if(geel_antwoord == "Ni" && blauw_antwoord == "na" && paars_antwoord == "ku" && groen_antwoord == "Penda"){
           teleport2[j].getAttribute("color");
           teleport2[j].setAttribute("color", "green");
         }
@@ -382,6 +382,46 @@ window.onload = () => {
             moetWeg[j].setAttribute("value", "");
           }
         }
+
+      }
+  }
+
+  var keuze_5 = document.getElementsByClassName('js--keuze-5');
+  var correct_5 = document.getElementsByClassName('js--correct-5');
+
+  for(let j = 0; j < keuze_5.length; j++){
+    keuze_5[j].onmouseenter = (event) => {
+      gemaakteKeuze_5 = keuze_5[j].getAttribute("value");
+      keuzeKleur_5 = keuze_5[j].getAttribute("color");
+      if(keuzeKleur_5 == "red" || keuzeKleur_5 == "green"){
+        keuze_5[j].setAttribute("color","lightgrey");
+        keuzeKleur_5 = keuze_5[j].getAttribute("color");
+      }
+        if(gemaakteKeuze_5 == "onjuist"){
+          keuze_5[j].setAttribute("color","lightgrey");
+        }else{
+          keuze_5[j].setAttribute("color","green");
+        }
+        keuzeKleur_5 = keuze_5[j].getAttribute("color");
+        for(let j = 0; j < correct_5.length; j++){
+          if(keuzeKleur_5 == "green"){
+            correct_5[j].getAttribute("value");
+            correct_5[j].setAttribute("value", "Gefeliciteerd! je hebt de puzzel opgelost en hiervoor krijg je de volgende letter: N");
+          }
+        }
+        for(let j = 0; j < triagle5.length; j++){
+          if(keuzeKleur_5 == "green"){
+            triagle5[j].getAttribute("color");
+            triagle5[j].setAttribute("color", "green");
+          }
+        }
+        for(let j = 0; j < teleport5.length; j++){
+          if(keuzeKleur_5 == "green"){
+            teleport5[j].getAttribute("color");
+            teleport5[j].setAttribute("color", "green");
+          }
+        }
+
 
       }
   }
