@@ -10,6 +10,9 @@
       <a-assets>
         <a-asset-item id="deur_prototype-obj" src="3dmodels/deur_prototype.obj"></a-asset-item>
         <a-asset-item id="deur_prototype-mtl" src="3dmodels/deur_prototype.mtl"></a-asset-item>
+        <a-asset-item id="thrash_can-obj" src="3dmodels/thrash_can.obj"></a-asset-item>
+        <a-asset-item id="thrash_can-mtl" src="3dmodels/thrash_can.mtl"></a-asset-item>
+        <img src="3dmodels/metal_thrash.png"></img>
         <img id="js--Berber-img" src="img/Berber.png"></img>
         <img id="js--arabisch-img" src="img/arabisch.PNG"></img>
         <img id="js--ge'ez-img" src="img/ge'ez.png"></img>
@@ -128,21 +131,51 @@
           <a-box color="#654321" width="0.1" height="0.8" depth="0.1" position="-0.25 -0.4 -0.2"></a-box>
           <a-box color="#654321" width="0.08" height="0.6" depth="0.08" position="0.25 0.35 -0.2"></a-box>
           <a-box color="#654321" width="0.08" height="0.6" depth="0.08" position="0.25 0.35 0.2"></a-box>
-          <a-box color="#654321" width="0.08" height="0.08" depth="0.5" position="0.25 0.35 0.2"></a-box>
+          <a-box color="#654321" width="0.08" height="0.08" depth="0.5" position="0.25 0.35 0"></a-box>
+          <a-box color="#654321" width="0.08" height="0.08" depth="0.5" position="0.25 0.6 0"></a-box>
+        </a-box>
+
+        <!-- Boekenkast -->
+        <a-box color="#3f2a14" width="1.9" height="0.1" depth="0.5" position="2.5 -1.5 4" rotation="0 0 0">
+          <a-box color="#52361b" width="2" height="3" depth="0.1" position="0 1.5 0.2" rotation="0 0 0"></a-box>
+          <a-box color="#3f2a14" width="1.9" height="0.1" depth="0.5" position="0 1 0" rotation="0 0 0"></a-box>
+          <a-box color="#3f2a14" width="1.9" height="0.1" depth="0.5" position="0 2 0" rotation="0 0 0"></a-box>
+          <a-box color="#3f2a14" width="1.9" height="0.1" depth="0.5" position="0 3 0" rotation="0 0 0"></a-box>
+          <a-box color="#654321" width="0.1" height="3" depth="0.5" position="-1 1.5 0" rotation="0 0 0"></a-box>
+          <a-box color="#654321" width="0.1" height="3" depth="0.5" position="1 1.5 0" rotation="0 0 0"></a-box>
+
+            <!-- Boeken -->
+          <a-box color="white" width="0.07" depth="0.25" height="0.3" position="-0.60 1.2 -0.05">
+            <a-box color="blue" width="0.01" depth="0.28" height="0.32" position="0.04 0 0.01"></a-box>
+            <a-box color="blue" width="0.01" depth="0.28" height="0.32" position="-0.04 0 0.01"></a-box>
+            <a-cylinder color="blue" position="0 0 -0.06" height="0.32" radius="0.08" open-ended="true" theta-start="150" theta-length="60"></a-cylinder>
+          </a-box>
+          <a-box color="white" width="0.07" depth="0.25" height="0.3" position="-0.70 1.2 -0.05">
+            <a-box color="red" width="0.01" depth="0.28" height="0.32" position="0.04 0 0.01"></a-box>
+            <a-box color="red" width="0.01" depth="0.28" height="0.32" position="-0.04 0 0.01"></a-box>
+            <a-cylinder color="red" position="0 0 -0.06" height="0.32" radius="0.08" open-ended="true" theta-start="150" theta-length="60"></a-cylinder>
+          </a-box>
+          <a-box color="white" width="0.07" depth="0.25" height="0.3" position="-0.85 1.21 -0.05" rotation="0 0 20">
+            <a-box color="green" width="0.01" depth="0.28" height="0.32" position="0.04 0 0.01"></a-box>
+            <a-box color="green" width="0.01" depth="0.28" height="0.32" position="-0.04 0 0.01"></a-box>
+            <a-cylinder color="green" position="0 0 -0.06" height="0.32" radius="0.08" open-ended="true" theta-start="150" theta-length="60"></a-cylinder>
+          </a-box>
         </a-box>
       </a-box>
 
+      <!-- prullenbak -->
+    <a-obj-model src="#thrash_can-obj" mtl="#thrash_can-mtl" position="1.5 0 -3.8" rotation="0 180 0" scale="0.2 0.2 0.2"></a-obj-model>
 
     <!-- Puzzelkamer 1 -->
     <a-box material="src: #bricks; repeat: 3 2" width="0.2" depth="9" height="4" position="-12 1.6 -4.5" rotation="0 -90 0">
       <a-box material="src: #wood" width="9" depth="9" height="0.2" position="4.5 -1.7 0"></a-box>
       <a-box material="src: #bricks; repeat: 3 2" width="9" depth="0.2" height="4" position="4.5 0 4.5"></a-box>
       <a-box material="src: #bricks; repeat: 3 2" width="9" depth="0.2" height="4" position="4.5 0 -4.5"></a-box>
-      <a-triangle class="js--triangle" color="red" vertex-a="2.5 4.4 0" vertex-b="-2 0 0" vertex-c="7.5 -0.5 0" position="0 2 2.5" rotation="0 90 0"></a-triangle>
+      <a-triangle class="js--triangle-1" color="red" vertex-a="2.5 4.4 0" vertex-b="-2 0 0" vertex-c="7.5 -0.5 0" position="0 2 2.5" rotation="0 90 0"></a-triangle>
 
       <!-- Voorkant -->
       <a-box material="src: #bricks; repeat: 3 2" width="0.2" depth="9" height="4" position="9 0 0"></a-box>
-      <a-triangle class="js--triangle" color="red" vertex-a="2.5 4.4 0" vertex-b="-2 0 0" vertex-c="7.5 -0.5 0" position="9 2 -2.5" rotation="0 270 0"></a-triangle>
+      <a-triangle class="js--triangle-1" color="red" vertex-a="2.5 4.4 0" vertex-b="-2 0 0" vertex-c="7.5 -0.5 0" position="9 2 -2.5" rotation="0 270 0"></a-triangle>
 
       <!-- Het dak -->
       <a-box material="src: #woodroof; repeat: 3" width="9" depth="0.2" height="7" position="4.5 4 2.5" rotation="-45 0 0"></a-box>
@@ -245,11 +278,11 @@
       <a-box material="src: #wood" width="9" depth="9" height="0.2" position="4.5 -1.7 0"></a-box>
       <a-box material="src: #bricks; repeat: 3 2" width="9" depth="0.2" height="4" position="4.5 0 4.5"></a-box>
       <a-box material="src: #bricks; repeat: 3 2" width="9" depth="0.2" height="4" position="4.5 0 -4.5"></a-box>
-      <a-triangle class="js--triangle" color="red" vertex-a="2.5 4.4 0" vertex-b="-2 0 0" vertex-c="7.5 -0.5 0" position="0 2 2.5" rotation="0 90 0"></a-triangle>
+      <a-triangle class="js--triangle-2" color="red" vertex-a="2.5 4.4 0" vertex-b="-2 0 0" vertex-c="7.5 -0.5 0" position="0 2 2.5" rotation="0 90 0"></a-triangle>
 
       <!-- Voorkant -->
       <a-box material="src: #bricks; repeat: 3 2" width="0.2" depth="9" height="4" position="9 0 0"></a-box>
-      <a-triangle class="js--triangle" color="red" vertex-a="2.5 4.4 0" vertex-b="-2 0 0" vertex-c="7.5 -0.5 0" position="9 2 -2.5" rotation="0 270 0"></a-triangle>
+      <a-triangle class="js--triangle-2" color="red" vertex-a="2.5 4.4 0" vertex-b="-2 0 0" vertex-c="7.5 -0.5 0" position="9 2 -2.5" rotation="0 270 0"></a-triangle>
 
       <!-- Het dak -->
       <a-box material="src: #woodroof; repeat: 3" width="9" depth="0.2" height="7" position="4.5 4 2.5" rotation="-45 0 0"></a-box>
@@ -357,11 +390,11 @@
       <a-box material="src: #wood" width="9" depth="9" height="0.2" position="4.5 -1.7 0"></a-box>
       <a-box material="src: #bricks; repeat: 3 2" width="9" depth="0.2" height="4" position="4.5 0 4.5"></a-box>
       <a-box material="src: #bricks; repeat: 3 2" width="9" depth="0.2" height="4" position="4.5 0 -4.5"></a-box>
-      <a-triangle class="js--triangle" color="red" vertex-a="2.5 4.4 0" vertex-b="-2 0 0" vertex-c="7.5 -0.5 0" position="0 2 2.5" rotation="0 90 0"></a-triangle>
+      <a-triangle class="js--triangle-3" color="red" vertex-a="2.5 4.4 0" vertex-b="-2 0 0" vertex-c="7.5 -0.5 0" position="0 2 2.5" rotation="0 90 0"></a-triangle>
 
       <!-- Voorkant -->
       <a-box material="src: #bricks; repeat: 3 2" width="0.2" depth="9" height="4" position="9 0 0"></a-box>
-      <a-triangle class="js--triangle" color="red" vertex-a="2.5 4.4 0" vertex-b="-2 0 0" vertex-c="7.5 -0.5 0" position="9 2 -2.5" rotation="0 270 0"></a-triangle>
+      <a-triangle class="js--triangle-3" color="red" vertex-a="2.5 4.4 0" vertex-b="-2 0 0" vertex-c="7.5 -0.5 0" position="9 2 -2.5" rotation="0 270 0"></a-triangle>
 
       <!-- Het dak -->
       <a-box material="src: #woodroof; repeat: 3" width="9" depth="0.2" height="7" position="4.5 4 2.5" rotation="-45 0 0"></a-box>
@@ -454,11 +487,11 @@
       <a-box material="src: #wood" width="9" depth="9" height="0.2" position="4.5 -1.7 0"></a-box>
       <a-box material="src: #bricks; repeat: 3 2" width="9" depth="0.2" height="4" position="4.5 0 4.5"></a-box>
       <a-box material="src: #bricks; repeat: 3 2" width="9" depth="0.2" height="4" position="4.5 0 -4.5"></a-box>
-      <a-triangle class="js--triangle" color="red" vertex-a="2.5 4.4 0" vertex-b="-2 0 0" vertex-c="7.5 -0.5 0" position="0 2 2.5" rotation="0 90 0"></a-triangle>
+      <a-triangle class="js--triangle-4" color="red" vertex-a="2.5 4.4 0" vertex-b="-2 0 0" vertex-c="7.5 -0.5 0" position="0 2 2.5" rotation="0 90 0"></a-triangle>
 
       <!-- Voorkant -->
       <a-box material="src: #bricks; repeat: 3 2" width="0.2" depth="9" height="4" position="9 0 0"></a-box>
-      <a-triangle class="js--triangle" color="red" vertex-a="2.5 4.4 0" vertex-b="-2 0 0" vertex-c="7.5 -0.5 0" position="9 2 -2.5" rotation="0 270 0"></a-triangle>
+      <a-triangle class="js--triangle-4" color="red" vertex-a="2.5 4.4 0" vertex-b="-2 0 0" vertex-c="7.5 -0.5 0" position="9 2 -2.5" rotation="0 270 0"></a-triangle>
 
       <!-- Het dak -->
       <a-box material="src: #woodroof; repeat: 3" width="9" depth="0.2" height="7" position="4.5 4 2.5" rotation="-45 0 0"></a-box>
@@ -517,7 +550,32 @@
       </a-plane>
 
       <!-- Puzzelnummer en driehoekCheck -->
-      <a-text value="4" position="0 3 0.2" rotation="0 90 0" align="center" color="black" scale="7 7 7"></a-text>
+    </a-box>
+    <a-box position="-12 1.6 -12" color="black" height="0.001" width="0.001" depth="0.001">
+      <!-- Voor uitleg -->
+      <a-plane color="lightgrey" rotation="0 270 0" position="4.3 0.8 0"  width="3.2" height="1.1">
+       <a-text align="center" class="js--correct-4" value="Het is ook vervelend: waar je het in het Nederlands hebt over ‘achttien’, is het in het Frans ‘dix-huit.’ In het Nederlands eindig je dus met het tiental, en zet je daarvoor wat je erbij optelt. In het Frans begin je met het tiental, en zet je eráchter wat je erbij optelt. Het Yoruba (gesproken in Nigeria en Benin) doet het weer helemaal anders... " color="black" width="3"></a-text>
+     </a-plane>
+     <a-plane color="lightgrey" rotation="0 270 0" position="4.3 -0.5 0"  width="3.2" height="1.1">
+      <a-text align="center" class="js--correct-weg" value="‘Wel alle naamwoordklassen nog aan toe! Ik moet ook geen koffie drinken als ik met belangrijke gegevens bezig ben. Deze aantekeningen waren voor het college dat ik straks moet geven, waarin ik iets wilde uitleggen over getallen in het Yoruba. Nu ben ik mijn voorbeeld kwijt! Kunt u me helpen, vreemdeling? Hoe zeg je ‘zeventien’ in het Yoruba?’" color="black" width="3"></a-text>
+    </a-plane>
+
+    <a-plane color="lightgrey" position="-1.5 0.7 -4.3"  width="3" height="0.5">
+     <a-text align="center" value="Gebruik deze afbeelding om tot je
+     antwoord te komen" color="black" width="3"></a-text>
+   </a-plane>
+
+      <a-image src="#cijfers" position="-1.5 -0.5 -4.35" height="1.5" width="3"></a-image>
+
+      <a-plane color="lightgrey" position="2 0.7 -4.3"  width="2" height="0.5">
+       <a-text align="center" value="Kies hier het juiste antwoord: " color="black" width="3"></a-text>
+      </a-plane>
+
+      <a-image value="onjuist" class="js--keuze-4 js--interact" position="1 0 -4.3" src="#ogung" align="center" color="lightgrey" width="1" height="0.3"></a-image>
+      <a-image value="juist" class="js--keuze-4 js--interact" src="#juist" color="lightgrey" align="center" position="2.5 -1 -4.3" width="1" height="0.3"></a-image>
+      <a-image value="onjuist" class="js--keuze-4 js--interact" position="2.5 0 -4.3" src="#ering" align="center" color="lightgrey" width="1" height="0.3"></a-image>
+      <a-image value="onjuist" class="js--keuze-4 js--interact" src="#20" color="lightgrey" align="center" position="1 -1 -4.3" width="1" height="0.3"></a-image>
+
     </a-box>
 
     <!-- Puzzelkamer 5 -->
@@ -525,11 +583,11 @@
       <a-box material="src: #wood" width="9" depth="9" height="0.2" position="4.5 -1.7 0"></a-box>
       <a-box material="src: #bricks; repeat: 3 2" width="9" depth="0.2" height="4" position="4.5 0 4.5"></a-box>
       <a-box material="src: #bricks; repeat: 3 2" width="9" depth="0.2" height="4" position="4.5 0 -4.5"></a-box>
-      <a-triangle class="js--triangle" color="red" vertex-a="2.5 4.4 0" vertex-b="-2 0 0" vertex-c="7.5 -0.5 0" position="0 2 2.5" rotation="0 90 0"></a-triangle>
+      <a-triangle class="js--triangle-5" color="red" vertex-a="2.5 4.4 0" vertex-b="-2 0 0" vertex-c="7.5 -0.5 0" position="0 2 2.5" rotation="0 90 0"></a-triangle>
 
       <!-- Voorkant -->
       <a-box material="src: #bricks; repeat: 3 2" width="0.2" depth="9" height="4" position="9 0 0"></a-box>
-      <a-triangle class="js--triangle" color="red" vertex-a="2.5 4.4 0" vertex-b="-2 0 0" vertex-c="7.5 -0.5 0" position="9 2 -2.5" rotation="0 270 0"></a-triangle>
+      <a-triangle class="js--triangle-5" color="red" vertex-a="2.5 4.4 0" vertex-b="-2 0 0" vertex-c="7.5 -0.5 0" position="9 2 -2.5" rotation="0 270 0"></a-triangle>
 
       <!-- Het dak -->
       <a-box material="src: #woodroof; repeat: 3" width="9" depth="0.2" height="7" position="4.5 4 2.5" rotation="-45 0 0"></a-box>
