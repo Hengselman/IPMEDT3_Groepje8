@@ -27,6 +27,7 @@
         <img id="ogung" src="img/ogung.png"></img>
         <img id="wood" src="img/wood.png"></img>
         <img id="woodroof" src="img/woodroof.jpg"></img>
+        <img id="woodpole" src="img/woodpole.jpg"></img>
         <img id="bricks" src="img/brickwall.jpg"></img>
       </a-assets>
       <a-camera id="js--camera">
@@ -48,7 +49,7 @@
 
       <!-- Raadselkamer -->
       <a-box material="src: #bricks; repeat: 3 2" width="0.2" depth="9" height="4" position="0 1.6 -4.5" rotation="0 -90 0">
-        <a-box material="src: #wood" width="9" depth="9" height="0.2" position="4.5 -1.7 0"></a-box>
+        <a-box material="src: #wood;" width="9" depth="9" height="0.2" position="4.5 -1.7 0"></a-box>
         <a-box material="src: #bricks; repeat: 3 2" width="9" depth="0.2" height="4" position="4.5 0 4.5"></a-box>
         <a-box material="src: #bricks; repeat: 3 2" width="9" depth="0.2" height="4" position="4.5 0 -4.5"></a-box>
         <a-triangle color="red" vertex-a="2.5 4.4 0" vertex-b="-2 0 0" vertex-c="7.5 -0.5 0" position="0 2 2.5" rotation="0 90 0"></a-triangle>
@@ -62,36 +63,36 @@
         <a-box material="src: #woodroof; repeat: 3" width="9" depth="0.2" height="7" position="4.5 4 -2.5" rotation="45 0 0"></a-box>
 
         <!-- Horizontale balken -->
-        <a-box color="orange" width="0.2" depth="6" height="0.2" position="8.8 4 0"></a-box>
-        <a-box color="orange" width="0.2" depth="6" height="0.2" position="7 4 0"></a-box>
-        <a-box color="orange" width="0.2" depth="6" height="0.2" position="4.5 4 0"></a-box>
-        <a-box color="orange" width="0.2" depth="6" height="0.2" position="2 4 0"></a-box>
-        <a-box color="orange" width="0.2" depth="6" height="0.2" position="0.2 4 0"></a-box>
+        <a-box material="src: #woodpole;" width="0.2" depth="6" height="0.2" position="8.8 4 0"></a-box>
+        <a-box material="src: #woodpole;" width="0.2" depth="6" height="0.2" position="7 4 0"></a-box>
+        <a-box material="src: #woodpole;" width="0.2" depth="6" height="0.2" position="4.5 4 0"></a-box>
+        <a-box material="src: #woodpole;" width="0.2" depth="6" height="0.2" position="2 4 0"></a-box>
+        <a-box material="src: #woodpole;" width="0.2" depth="6" height="0.2" position="0.2 4 0"></a-box>
 
         <!-- In de lengte -->
-        <a-box color="orange" width="9" depth="0.2" height="0.2" position="4.5 4 0"></a-box>
-        <a-box color="orange" width="9" depth="0.2" height="0.2" position="4.5 4 2"></a-box>
-        <a-box color="orange" width="9" depth="0.2" height="0.2" position="4.5 4 -2"></a-box>
+        <a-box material="src: #woodpole;" width="9" depth="0.2" height="0.2" position="4.5 4 0"></a-box>
+        <a-box material="src: #woodpole;" width="9" depth="0.2" height="0.2" position="4.5 4 2"></a-box>
+        <a-box material="src: #woodpole;" width="9" depth="0.2" height="0.2" position="4.5 4 -2"></a-box>
 
         <!-- Verticale balken -->
-        <a-box color="orange" width="0.2" depth="0.2" height="2" position="2 5 0"></a-box>
-        <a-box color="orange" width="0.2" depth="0.2" height="2" position="4.5 5 0"></a-box>
-        <a-box color="orange" width="0.2" depth="0.2" height="2" position="7 5 0"></a-box>
+        <a-box material="src: #woodpole;" width="0.2" depth="0.2" height="2" position="2 5 0"></a-box>
+        <a-box material="src: #woodpole;" width="0.2" depth="0.2" height="2" position="4.5 5 0"></a-box>
+        <a-box material="src: #woodpole;" width="0.2" depth="0.2" height="2" position="7 5 0"></a-box>
 
         <!-- Schuine balken -->
-        <a-box color="orange" width="0.2" depth="3" height="0.2" position="0.2 5 1" rotation="45 0 0"></a-box>
-        <a-box color="orange" width="0.2" depth="3" height="0.2" position="0.2 5 -1" rotation="-45 0 0"></a-box>
-        <a-box color="orange" width="0.2" depth="3" height="0.2" position="2 5 1" rotation="45 0 0"></a-box>
-        <a-box color="orange" width="0.2" depth="3" height="0.2" position="2 5 -1" rotation="-45 0 0"></a-box>
-        <a-box color="orange" width="0.2" depth="3" height="0.2" position="4.5 5 1" rotation="45 0 0"></a-box>
-        <a-box color="orange" width="0.2" depth="3" height="0.2" position="4.5 5 -1" rotation="-45 0 0"></a-box>
-        <a-box color="orange" width="0.2" depth="3" height="0.2" position="7 5 1" rotation="45 0 0"></a-box>
-        <a-box color="orange" width="0.2" depth="3" height="0.2" position="7 5 -1" rotation="-45 0 0"></a-box>
-        <a-box color="orange" width="0.2" depth="3" height="0.2" position="8.8 5 1" rotation="45 0 0"></a-box>
-        <a-box color="orange" width="0.2" depth="3" height="0.2" position="8.8 5 -1" rotation="-45 0 0"></a-box>
+        <a-box material="src: #woodpole;" width="0.2" depth="3" height="0.2" position="0.2 5 1" rotation="45 0 0"></a-box>
+        <a-box material="src: #woodpole;" width="0.2" depth="3" height="0.2" position="0.2 5 -1" rotation="-45 0 0"></a-box>
+        <a-box material="src: #woodpole;" width="0.2" depth="3" height="0.2" position="2 5 1" rotation="45 0 0"></a-box>
+        <a-box material="src: #woodpole;" width="0.2" depth="3" height="0.2" position="2 5 -1" rotation="-45 0 0"></a-box>
+        <a-box material="src: #woodpole;" width="0.2" depth="3" height="0.2" position="4.5 5 1" rotation="45 0 0"></a-box>
+        <a-box material="src: #woodpole;" width="0.2" depth="3" height="0.2" position="4.5 5 -1" rotation="-45 0 0"></a-box>
+        <a-box material="src: #woodpole;" width="0.2" depth="3" height="0.2" position="7 5 1" rotation="45 0 0"></a-box>
+        <a-box material="src: #woodpole;" width="0.2" depth="3" height="0.2" position="7 5 -1" rotation="-45 0 0"></a-box>
+        <a-box material="src: #woodpole;" width="0.2" depth="3" height="0.2" position="8.8 5 1" rotation="45 0 0"></a-box>
+        <a-box material="src: #woodpole;" width="0.2" depth="3" height="0.2" position="8.8 5 -1" rotation="-45 0 0"></a-box>
 
         <!-- Info paneel -->
-        <a-plane color="blue" width="3" height="2" position="8.89 0 0" rotation="0 -90 0">
+        <a-plane color="blue" width="3" height="2" position="4.5 0 -4.39" rotation="0 0 0">
           <a-text value="Kijk naar een\nrode knop\nnaast de puzzel\ndie nog opgelost\nmoet worden.\nDit brengt je\nnaar de gekozen\npuzzel." position="-1.4 0 0" color="black" scale="0.8 0.8 0.8"></a-text>
 
           <a-cylinder id="js--teleportRaadsel" class="js--interact" color="red" position="0.4 0.8 0" rotation="90 0 0" height="0.05" radius="0.08"></a-cylinder>
@@ -113,8 +114,13 @@
           <a-text value="Puzzel 5" position="0.5 -0.7 0" color="black" scale="0.6 0.6 0.6"></a-text>
         </a-plane>
 
-        <!-- Puzzelnummer en driehoekCheck -->
-        <a-text value="1" position="0 3 0.2" rotation="0 90 0" align="center" color="black" scale="7 7 7"></a-text>
+        <!-- Bureau -->
+        <a-box color="#654321" width="1" height="0.2" depth="2" position="2 -0.6 0">
+          <a-box color="brown" width="0.2" height="1" depth="0.2" position="0.35 -0.6 0.85"></a-box>
+          <a-box color="brown" width="0.2" height="1" depth="0.2" position="-0.35 -0.6 0.85"></a-box>
+          <a-box color="brown" width="0.2" height="1" depth="0.2" position="0.35 -0.6 -0.85"></a-box>
+          <a-box color="brown" width="0.2" height="1" depth="0.2" position="-0.35 -0.6 -0.85"></a-box>
+        </a-box>
       </a-box>
 
 
@@ -359,6 +365,28 @@
 
       <!-- Puzzelnummer en driehoekCheck -->
       <a-text value="3" position="0 3 0.2" rotation="0 90 0" align="center" color="black" scale="7 7 7"></a-text>
+    </a-box>
+    <a-box position="-6 1.6 -11" color="black" height="0.001" width="0.001" depth="0.001">
+      <!-- Voor uitleg -->
+      <a-text class="js--correct-3" value="In een zogenoemde toontaal heeft elke lettergreep een vaste toonhoogte, zoals hoog, laag,
+      dalend of stijgend, en is die toonhoogte wat we noemen contrastief. Dat wil zeggen dat de betekenis van een woord enkel en alleen afhangt van de toonhoogte waarop het wordt uitgesproken. Ongeveer 60-70% van de talen op de wereld maakt gebruik van zulke contrastieve toon, en in Afrika weten ze er zeker wel raad mee! In het Teke-Kukuya bijvoorbeeld (gesproken in Congo) betekent buku met twee lage tonen ‘onderdeel’, maar betekent buku met twee hoge tonen ‘boek’! Welke tonen hoor je in de volgende Teke-Kukuya woorden?" position="-3 0 2" rotation="0 90 0" color="black" height="2" width="4"></a-text>
+
+      <a-text value="Het is de bedoeling dat je eerst op een bol klikt om het geluid af te spelen en daarna klik je op de toon die erbij hoort." position="-1.5 0.75 -2.8" color="black" height="2" width="3"></a-text>
+
+      <a-sphere class="js--sphere-3 js--interact" value="hoog-laag" sound="src: #mali; volume: 2; loop: false; on: mouseenter;" color="lightpink" radius="0.2" position="2 -1.1 -2.25"></a-sphere>
+      <a-sphere class="js--sphere-3 js--interact" value="hoog-hoog" sound="src: #buku; volume: 2; loop: false; on: mouseenter;" color="lightpink" radius="0.2" position="0 -1.1 -2.25"></a-sphere>
+      <a-sphere class="js--sphere-3 js--interact" value="laag-hoog-laag" sound="src: #kiyele; volume: 2; loop: false; on: mouseenter;" color="lightpink" radius="0.2" position="-2 -1.1 -2.25"></a-sphere>
+
+
+      <a-plane value="hoog-laag" class="js--keuze-3 js--interact" color="lightgrey" position="0 0 -2.8"  width="1.1" height="0.3">
+     <a-text value="hoog-laag" align="center" color="black" width="4"></a-text>
+     </a-plane>
+      <a-plane value="hoog-hoog" class="js--keuze-3 js--interact" color="lightgrey" position="-2 0 -2.8" width="1.1" height="0.3">
+      <a-text value="hoog-hoog" align="center" color="black" width="4"></a-text>
+      </a-plane>
+      <a-plane  value="laag-hoog-laag" class="js--keuze-3 js--interact" color="lightgrey" position="2 0 -2.8"  width="1.1" height="0.3">
+        <a-text value="laag-hoog-laag" align="center" color="black" width="4"></a-text>
+      </a-plane>
     </a-box>
 
     <!-- Puzzelkamer 4 -->
