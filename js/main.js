@@ -31,6 +31,7 @@ window.onload = () => {
   let teleport3 = document.getElementsByClassName('js--teleportPuzzel3')
   let teleport4 = document.getElementsByClassName('js--teleportPuzzel4')
   let teleport5 = document.getElementsByClassName('js--teleportPuzzel5')
+  let correct2 = document.getElementsByClassName('js--correct-2')
 
   const camera = document.getElementById('js--camera');
 
@@ -198,6 +199,12 @@ window.onload = () => {
         if(geel_antwoord == "Ni" && blauw_antwoord == "na" && paars_antwoord == "ku" && groen_antwoord == "Penda"){
           triagle2[j].getAttribute("color");
           triagle2[j].setAttribute("color", "green");
+        }
+      }
+      for(let j = 0; j < correct2.length; j++){
+        if(geel_antwoord == "Ni" && blauw_antwoord == "na" && paars_antwoord == "ku" && groen_antwoord == "Penda"){
+          correct2[j].getAttribute("value");
+          correct2[j].setAttribute("value", "Gefeliciteerd! je hebt de puzzel opgelost en hiervoor krijg je de volgende letter: H");
         }
       }
       for(let j = 0; j < teleport2.length; j++){
