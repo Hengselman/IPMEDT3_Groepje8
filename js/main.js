@@ -32,6 +32,17 @@ window.onload = () => {
   let teleport4 = document.getElementsByClassName('js--teleportPuzzel4')
   let teleport5 = document.getElementsByClassName('js--teleportPuzzel5')
   let correct2 = document.getElementsByClassName('js--correct-2')
+  const letterA = document.getElementById('js--a')
+  const letterN = document.getElementById('js--n')
+  const letterT = document.getElementById('js--t')
+  const letterH = document.getElementById('js--h')
+  const letterC = document.getElementById('js--c')
+  const rodePijl1 = document.getElementById('js--rodePijl1')
+  const rodePijl2 = document.getElementById('js--rodePijl2')
+  const rodePijl3 = document.getElementById('js--rodePijl3')
+  const rodePijl4 = document.getElementById('js--rodePijl4')
+  const rodePijl5 = document.getElementById('js--rodePijl5')
+  let rodePijl = document.getElementsByClassName('js--rodePijl')
 
   const camera = document.getElementById('js--camera');
 
@@ -207,6 +218,9 @@ window.onload = () => {
           correct2[j].setAttribute("value", "Gefeliciteerd! je hebt de puzzel opgelost en hiervoor krijg je de volgende letter: H");
         }
       }
+      if(geel_antwoord == "Ni" && blauw_antwoord == "na" && paars_antwoord == "ku" && groen_antwoord == "Penda"){
+        letterH.setAttribute("position","0.8 -0.62 -0.9");
+      }
       for(let j = 0; j < teleport2.length; j++){
         if(geel_antwoord == "Ni" && blauw_antwoord == "na" && paars_antwoord == "ku" && groen_antwoord == "Penda"){
           teleport2[j].getAttribute("color");
@@ -267,6 +281,9 @@ window.onload = () => {
           correct[j].getAttribute("value");
           correct[j].setAttribute("value", "Gefeliciteerd! je hebt de puzzel opgelost en hiervoor krijg je de volgende letter: A");
         }
+      }
+      if(schriftKleur1 == "green" && schriftKleur2 == "green" && schriftKleur3 == "green" && schriftKleur4 == "green" && schriftKleur5 == "green"){
+        letterA.setAttribute("position","0.8 -0.5 -0.9");
       }
       for(let j = 0; j < triagle1.length; j++){
         if(schriftKleur1 == "green" && schriftKleur2 == "green" && schriftKleur3 == "green" && schriftKleur4 == "green" && schriftKleur5 == "green"){
@@ -343,6 +360,9 @@ window.onload = () => {
           teleport3[j].setAttribute("color", "green");
         }
       }
+      if(gemaakteKeuze1 == "lightgreen" && gemaakteKeuze2 == "lightgreen" && gemaakteKeuze3 == "lightgreen"){
+        letterC.setAttribute("position", "1.2 -0.5 -0.9");
+      }
     }
   }
 
@@ -389,6 +409,9 @@ window.onload = () => {
             moetWeg[j].setAttribute("value", "");
           }
         }
+        if(keuzeKleur_4 == "green"){
+          letterT.setAttribute("position","0.8 -0.62 -0.9")
+        }
 
       }
   }
@@ -428,9 +451,17 @@ window.onload = () => {
             teleport5[j].setAttribute("color", "green");
           }
         }
-
-
+        if(keuzeKleur_5 == "green"){
+          letterN.setAttribute("position","1.05 -0.66 -0.9")
+        }
       }
+  }
+
+  for(var i = 0; i < rodePijl.length; i++){
+    rodePijl[i].addEventListener('click', function(evt){
+      rodePijl[i].setAttribute("color", "green");
+      console.log("Check");
+    });
   }
 
   for (var i =0; i < teleportRaadsel.length; i++){
